@@ -23,7 +23,12 @@ load_dotenv()
 import numpy as np
 import json
 from datetime import datetime
-from flask import Flask, request, jsonify
+from flask import (
+    Flask,
+    request,
+    jsonify,
+    send_from_directory
+)
 from flask_cors import CORS
 
 from werkzeug.exceptions import RequestEntityTooLarge
@@ -57,7 +62,11 @@ if str(ROOT_DIR) not in sys.path:
 # APP SETUP
 # ============================================================
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder=str(ROOT_DIR / "frontend"),
+    static_url_path=""
+)
 
 # Maximum upload size (15 MB)
 app.config["MAX_CONTENT_LENGTH"] = 15 * 1024 * 1024
@@ -133,12 +142,20 @@ def file_too_large(e):
 # HEALTH CHECK
 # ============================================================
 
-@app.route("/", methods=["GET"])
-def health_check():
-    return jsonify({
-        "status": "SpectroCough API running"
-    })
+@app.route("/")
+def index():
+    return send_from_directory(app.static_folder, "index.html")
 
+
+@app.route("/<path:path>")
+def frontend(path):
+
+    full_path = os.path.join(app.static_folder, path)
+
+    if os.path.isfile(full_path):
+        return send_from_directory(app.static_folder, path)
+
+    return send_from_directory(app.static_folder, "index.html")
 
 # ============================================================
 # AUDIO INFERENCE ROUTE

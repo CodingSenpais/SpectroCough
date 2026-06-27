@@ -7,10 +7,7 @@
 //         ? "http://localhost:5000"
 //         : ""; // Flask backend
 
-const API_BASE =
-    ["localhost", "127.0.0.1"].includes(window.location.hostname)
-        ? "http://127.0.0.1:5000"
-        : "";
+const API_BASE = "";
 
 /* =========================================
    SECURE API WRAPPER
