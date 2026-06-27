@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screening | SpectroCough</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+</head>
+<body>
+
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-left">
+            <div class="logo-container">
+                <img src="assets/sc_icon.png" class="logo-icon-img" alt="Spectrocough Logo">
+                <span class="logo-text">SpectroCough</span>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="screening.html" class="nav-link active">Screening</a>
+            <a href="report.html" class="nav-link">Report</a>
+            <a href="about.html" class="nav-link">About Us</a>
+        </div>
+
+        <div class="nav-right">
+            <div id="user-profile">
+                <span id="user-name">Dr. User</span>
+                <button onclick="logout()" class="icon-btn"><i class="fa-solid fa-power-off"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="screening-container">
+        <h1 class="page-title">Respiratory Screening Panel</h1>
+        
+        <div class="panels-wrapper">
+            
+            <div class="glass-panel screening-panel" id="panel-stethoscope">
+                <div class="panel-header">
+                    <i class="fa-solid fa-stethoscope panel-icon"></i>
+                    <h2>Stethoscopic Panel</h2>
+                </div>
+                
+                <div class="panel-note">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <strong>Supported:</strong> Asthma, Pneumonia, COPD, Bronchitis, Healthy.
+                </div>
+
+                <div class="injection-box" id="drop-zone-steth" onclick="triggerFileUpload('steth')">
+                    <i class="fa-solid fa-file-audio upload-icon"></i>
+                    <p>Click to Inject Audio File</p>
+                    <span class="file-status" id="status-steth">No file selected</span>
+                    <small class="upload-hint">
+                    </small>
+                    <input type="file" id="file-steth" hidden accept=".wav,.mp3,.flac,.ogg,.m4a">
+                </div>
+
+                <button class="glass-btn primary-btn full-width sc-donate-btn anim" onclick="injectAudio('steth')">
+                    Stethoscope Analysis
+                </button>
+            </div>
+
+            <div class="glass-panel screening-panel" id="panel-mic">
+                <div class="panel-header">
+                    <i class="fa-solid fa-microphone-lines panel-icon"></i>
+                    <h2>Microphonic Panel</h2>
+                </div>
+                
+                <div class="panel-note">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <strong>Supported:</strong> COVID-19, Healthy, Non-Cough(Sneezing).
+                </div>
+
+                <div class="injection-box" id="drop-zone-mic" onclick="triggerFileUpload('mic')">
+                    <i class="fa-solid fa-microphone upload-icon"></i>
+                    <p>Click to Inject Audio File</p>
+                    <span class="file-status" id="status-mic">No file selected</span>
+                    <input type="file" id="file-mic" hidden accept=".wav,.mp3,.flac,.ogg,.m4a">
+                </div>
+
+                <button class="glass-btn primary-btn full-width sc-donate-btn anim" onclick="injectAudio('mic')">
+                    Microphone Analysis
+                </button>
+            </div>
+
+        </div>
+
+        
+
+    </main>
+
+    <footer class="glass-footer">
+        <p class="disclaimer-note">
+            <strong>Note:</strong> Pre-screening tool only. Consult a doctor for diagnosis.
+        </p>
+    </footer>
+
+    <div id="processing-overlay" class="processing-overlay hidden">
+
+            <div class="loading-content">
+
+                <div id="loading-animation" class="loading-animation">
+
+                    <div class="pulse-ring"></div>
+
+                    <div class="pulse-ring ring2"></div>
+
+                    <div class="ai-core">
+
+                        <i id="loading-icon"
+                           class="fa-solid fa-stethoscope">
+                        </i>
+
+                    </div>
+
+                </div>
+
+                <h2 id="loading-title">
+                    Initializing SpectroCough AI...
+                </h2>
+
+                <p id="loading-status">
+                    Preparing analysis...
+                </p>
+
+            </div>
+
+        </div>
+
+    <div class="chatbot-system">
+        <div class="chatbot-trigger" onclick="openChatOverlay()">
+            <model-viewer 
+                src="assets/3d_model/coughie.glb"
+                alt="Chatbot" 
+                disable-zoom 
+                disable-tap
+                interaction-prompt="none"
+                class="tiny-bot">
+            </model-viewer>
+        </div>
+        <br>
+        <div class="chatbot-label">Coughie</div>
+
+        <div id="coughie-overlay" class="chat-overlay hidden">
+            <div class="overlay-backdrop" onclick="closeChatOverlay()"></div>
+            
+            <div class="chat-interface-wrapper">
+                <div class="chat-model-container">
+                    <video id="coughie-video"
+                           autoplay
+                           muted
+                           playsinline
+                           preload="auto"
+                           class="coughie-video">
+                        <source src="assets/video_animation/coughie_greeting.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="chat-box-main">
+                    <div class="chat-header">
+                        <div class="header-info">
+
+                            <h3>Coughie Assistant</h3>
+
+                            <span class="status">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </span>
+
+                        </div>
+
+                        <button class="close-btn" onclick="closeChatOverlay()">
+                            ×
+                        </button>
+                    </div>
+                    
+                    <div class="chat-content" id="chat-content-area">
+                        <div class="bot-msg">Hello! I'm Coughie. How can I assist with your screening today?</div>
+                        
+                        <div class="chat-templates">
+                            <button onclick="sendTemplate('How do I start screening?')">How do I start screening?</button>
+                            <button onclick="sendTemplate('What is SpectroCough?')">What is SpectroCough?</button>
+                            <button onclick="sendTemplate('What do the results mean?')">What do the results mean?</button>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-zone">
+                        <input type="text" id="user-input" placeholder="Type your query here...">
+                        <button class="send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

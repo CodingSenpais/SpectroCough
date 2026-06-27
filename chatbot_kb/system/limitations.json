@@ -1,0 +1,28 @@
+{
+  "medical_limitations": [
+    "The system is not a medical diagnostic tool.",
+    "Predictions should not replace professional medical advice.",
+    "Clinical confirmation is required for diagnosis."
+  ],
+
+  "technical_limitations": [
+    "Performance depends on audio quality and recording conditions.",
+    "Background noise may affect prediction accuracy.",
+    "Variations in age, gender, and environment may influence cough acoustics.",
+    "Limited training data may reduce generalization across populations."
+  ],
+
+  "model_limitations": [
+    "May produce false positives or false negatives.",
+    "Cannot detect conditions outside trained disease categories.",
+    "Model confidence does not guarantee medical accuracy."
+  ],
+
+  "operational_limitations": [
+    "Requires clear cough audio input.",
+    "Device microphone quality affects performance.",
+    "Real-world deployment may introduce unseen noise patterns."
+  ],
+
+  "ethical_notice": "The system provides supportive evidence for early screening and must be used responsibly."
+}

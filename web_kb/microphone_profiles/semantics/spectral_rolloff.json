@@ -1,0 +1,37 @@
+{
+    "feature_name": "spectral_rolloff",
+    "description": "Spectral Rolloff (High-Frequency Energy Boundary)",
+
+    "layman_explanation": "Spectral rolloff indicates how far into the higher frequencies the cough sound energy extends. A higher rolloff means the cough contains stronger high-pitched components. A lower rolloff means most of the sound energy stays in lower frequencies.",
+
+    "scientific_explanation": "Spectral rolloff defines the frequency below which a fixed percentage (commonly 85%) of the total spectral energy is accumulated. It serves as a boundary marker for high-frequency energy distribution. Elevated rolloff values indicate significant high-frequency contribution, while lower values reflect dominance of low-frequency energy components.",
+
+    "physiological_context": "High-frequency components in cough sounds may arise from turbulent airflow through narrowed or obstructed airways, mucus interaction, or abrupt airflow transitions. Lower rolloff values may reflect smoother airflow or reduced high-frequency turbulence.",
+
+"dataset_context": "In SpectroCough Panel 2, spectral rolloff is statistically modeled across microphone-recorded respiratory sound classes including covid19, healthy_cough, and sneezing. This feature represents the frequency boundary below which most acoustic energy is concentrated. Deviations are interpreted relative to the class-specific baseline distribution derived from the microphone training dataset.",
+
+    "deviation_logic": {
+        "very_high": "The cough contains significantly more high-frequency energy than typical samples of this class. This suggests stronger high-frequency turbulence or sharp acoustic transitions.",
+        "moderately_high": "The cough shows somewhat elevated high-frequency boundary compared to the class baseline.",
+        "normal_range": "The high-frequency energy boundary falls within the statistically expected range for this class.",
+        "moderately_low": "The cough exhibits slightly reduced high-frequency energy compared to the baseline.",
+        "very_low": "The cough has significantly lower high-frequency energy boundary than typical samples of this class."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "Spectral rolloff should be interpreted in conjunction with centroid and bandwidth. High rolloff combined with high centroid may indicate strong high-frequency dominance. Rolloff alone does not determine class membership but contributes to the overall acoustic signature.",
+
+    "counterfactual_template": "To resemble the target class more closely, the high-frequency boundary (spectral rolloff) would need to {direction} toward the statistical baseline of that class.",
+
+    "visualization_note": "In radar visualization, spectral rolloff represents the extent of high-frequency energy distribution relative to baseline.",
+
+    "tooltip": "High-frequency energy boundary of the cough spectrum."
+}

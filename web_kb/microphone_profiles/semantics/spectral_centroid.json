@@ -1,0 +1,37 @@
+{
+    "feature_name": "spectral_centroid",
+    "description": "Spectral Centroid (Frequency Center of Mass)",
+
+    "layman_explanation": "Spectral centroid indicates where most of the sound energy is concentrated in the frequency range. A higher value means the cough sounds sharper or brighter. A lower value means the cough sounds deeper or more muffled.",
+
+    "scientific_explanation": "Spectral centroid represents the weighted mean frequency of the power spectrum. It is often interpreted as the 'center of mass' of the frequency distribution. Higher centroid values indicate greater high-frequency energy concentration, while lower centroid values indicate dominance of low-frequency components. It provides insight into spectral brightness and airflow turbulence characteristics.",
+
+    "physiological_context": "Cough spectral brightness can be influenced by airway constriction, mucus presence, airflow turbulence, and glottal excitation patterns. Increased high-frequency components may result from turbulent airflow through narrowed airways, while lower centroid values may reflect smoother airflow or dominant low-frequency components.",
+
+    "dataset_context": "In SpectroCough Panel 2, spectral centroid is statistically modeled across microphone-recorded respiratory sound classes including covid19, healthy_cough, and sneezing. Different respiratory sound categories may exhibit characteristic frequency distributions that shift the spectral center upward or downward. Deviations are interpreted relative to the class-specific baseline distribution derived from the microphone training dataset.",
+    
+    "deviation_logic": {
+        "very_high": "The cough contains significantly more high-frequency energy than typical samples of this class. This suggests increased spectral brightness or turbulence.",
+        "moderately_high": "The cough shows somewhat elevated high-frequency content relative to the class baseline.",
+        "normal_range": "The frequency center of mass falls within the statistically expected range for this class.",
+        "moderately_low": "The cough contains slightly less high-frequency energy than average for this class.",
+        "very_low": "The cough shows significantly reduced high-frequency content compared to the class baseline, indicating a more low-frequency dominated signal."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "Spectral centroid should be interpreted alongside spectral bandwidth and contrast. A high centroid combined with high ZCR may indicate strong turbulence. It contributes to the overall acoustic signature but does not independently determine classification.",
+
+    "counterfactual_template": "To better match the target class profile, the spectral brightness (centroid) would need to {direction} toward that class's statistical mean.",
+
+    "visualization_note": "In radar visualization, spectral centroid represents the brightness dimension of the cough signal.",
+
+    "tooltip": "Frequency center of mass (brightness of cough)."
+}

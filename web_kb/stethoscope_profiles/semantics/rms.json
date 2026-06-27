@@ -1,0 +1,37 @@
+{
+    "feature_name": "rms",
+    "description": "Root Mean Square (RMS) Energy",
+
+    "layman_explanation": "RMS measures how strong or forceful the cough sounds overall. A higher RMS means the cough bursts are louder and more intense. A lower RMS means the cough is softer and less forceful.",
+
+    "scientific_explanation": "Root Mean Square (RMS) energy represents the average amplitude magnitude of the acoustic waveform over time. It reflects the mechanical energy transferred into sound during the cough event. Elevated RMS values often correspond to forceful expiratory airflow and strong glottal excitation, while lower RMS values indicate reduced acoustic pressure variation. RMS does not represent frequency content but rather the global intensity distribution of the cough waveform.",
+
+    "physiological_context": "Cough intensity is influenced by expiratory muscle strength, airway resistance, and lung capacity. Forceful coughs typically produce higher amplitude pressure waves, whereas restricted airflow or weakened respiratory effort can reduce overall acoustic energy.",
+
+    "dataset_context": "Within SpectroCough, RMS is statistically modeled per disease class. Each class has a baseline mean and standard deviation derived from the training dataset. Deviations from this baseline are interpreted relative to that disease-specific distribution.",
+
+    "deviation_logic": {
+        "very_high": "The cough energy is more than 2 standard deviations above the class baseline. This suggests unusually forceful expiratory bursts compared to typical samples of this class.",
+        "moderately_high": "The cough energy is elevated relative to the baseline but still within statistical plausibility.",
+        "normal_range": "The cough energy falls within the statistically expected range for this class.",
+        "moderately_low": "The cough is somewhat weaker than the average samples of this class.",
+        "very_low": "The cough energy is significantly below the class baseline, suggesting reduced acoustic intensity."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "Interpretation of RMS must always consider it in combination with spectral and temporal features. High energy alone does not determine disease class but contributes to statistical pattern recognition.",
+
+    "counterfactual_template": "To move toward the target class profile, the overall cough intensity (RMS) would need to {direction} toward the statistical mean of that class.",
+
+    "visualization_note": "In radar visualization, RMS reflects radial distance from baseline. Higher deviation corresponds to greater outward displacement.",
+
+    "tooltip": "Overall cough intensity (energy magnitude of waveform)."
+}

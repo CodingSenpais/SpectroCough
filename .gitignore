@@ -1,0 +1,66 @@
+# ==========================================================
+# SpectroCough - .gitignore
+# GitHub + Render Deployment
+# ==========================================================
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Conda
+.conda/
+conda-meta/
+
+# Environment variables
+.env
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/
+*.log
+
+# Cache
+cache/
+.pytest_cache/
+.mypy_cache/
+
+# Temporary uploads
+temp_uploads/
+frontend/temp_uploads/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Test coverage
+.coverage
+coverage.xml
+htmlcov/
+
+# Training datasets
+datasets/
+
+# Benchmark outputs
+ml_pipeline/**/benchmark_results/
+
+# Runtime generated reports
+api/reports.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

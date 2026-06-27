@@ -1,0 +1,11 @@
+{
+  "term": "RMS Energy",
+
+  "definition_simple": "RMS (Root Mean Square) Energy measures how strong or loud an audio signal is over time. It represents the average intensity of the sound waveform and gives an estimate of the signal’s loudness.",
+
+  "definition_scientific": "Root Mean Square (RMS) Energy is a time-domain signal feature defined as the square root of the mean of the squared amplitude values of a signal over a frame: RMS = sqrt((1/N) * sum(x_i^2)), where x_i are the signal samples and N is the number of samples. It represents the average power or energy of the waveform and is widely used in digital signal processing to quantify signal magnitude over time.",
+
+  "why_it_matters_in_cough_analysis": "RMS Energy is critical in cough analysis because cough sounds typically produce sudden bursts of high acoustic energy compared to background breathing or silence. It helps detect cough events, distinguish cough intensity levels, identify abnormal respiratory patterns, and segment cough signals from continuous audio streams. In systems like SpectroCough, RMS helps identify cough onset, measure cough strength, and differentiate between real coughs and low-energy noise or fake cough sounds.",
+
+  "limitations": "RMS Energy does not provide frequency information and only measures signal magnitude. It cannot distinguish between different types of sounds with similar energy levels. It is sensitive to background noise and recording conditions, which may distort energy measurements. RMS also cannot capture detailed cough characteristics such as timbre or spectral distribution, so it must be combined with spectral features like MFCC, ZCR, or spectral bandwidth for robust cough classification."
+}

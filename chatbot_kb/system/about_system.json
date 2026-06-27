@@ -1,0 +1,51 @@
+{
+  "system_name": "SpectroCough",
+
+  "version": "v1.0",
+
+  "description": "SpectroCough is an AI-powered respiratory illness pre-screening system that analyzes cough audio to detect early signs of respiratory diseases such as COVID-19, tuberculosis, pneumonia, bronchitis, and asthma. It provides rapid, contactless, and affordable health screening using acoustic signal processing and machine learning techniques.",
+
+  "purpose": "The system is designed as a non-diagnostic triage tool that assists healthcare providers and individuals by offering supportive evidence for early respiratory illness detection.",
+
+  "key_capabilities": [
+    "Real-time cough audio analysis",
+    "Multi-disease respiratory classification",
+    "Fake cough and non-cough sound detection",
+    "Confidence-scored predictions",
+    "Early respiratory illness pre-screening",
+    "Noise-robust acoustic feature analysis",
+    "Support for telemedicine and remote monitoring"
+  ],
+
+  "supported_conditions": [
+    "COVID-19",
+    "Tuberculosis",
+    "Pneumonia",
+    "Bronchitis",
+    "Asthma",
+    "Normal cough",
+    "Fake cough or cough-like sounds"
+  ],
+
+  "technology_stack": {
+    "audio_processing": ["Librosa", "NumPy"],
+    "machine_learning": ["TensorFlow", "Keras", "Scikit-Learn"],
+    "feature_extraction": [
+      "Mel Spectrogram",
+      "MFCC",
+      "RMS Energy",
+      "Spectral Features",
+      "Statistical Acoustic Descriptors"
+    ],
+    "model_architecture": "Hybrid CNN + Dense Neural Network"
+  },
+
+  "intended_users": [
+    "Healthcare professionals",
+    "Telemedicine platforms",
+    "Public health screening systems",
+    "Individuals seeking early respiratory screening"
+  ],
+
+  "disclaimer": "SpectroCough is a pre-screening aid that provides supportive evidence and is not a medical diagnosis system."
+}

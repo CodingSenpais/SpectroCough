@@ -1,0 +1,11 @@
+{
+  "term": "Log-Mel Spectrogram",
+
+  "definition_simple": "A Log-Mel Spectrogram shows how sound energy changes over time using a human-hearing frequency scale and logarithmic compression.",
+
+  "definition_scientific": "A Log-Mel Spectrogram is obtained by computing the mel spectrogram and applying logarithmic scaling to the mel power values. This compression reflects human auditory perception of loudness and improves feature representation for machine learning models.",
+
+  "why_it_matters_in_cough_analysis": "Log-Mel Spectrograms are widely used in deep learning models for cough detection because they provide stable and perceptually meaningful representations of respiratory sounds. They capture temporal and spectral patterns of cough bursts, disease-specific acoustic signatures, and airway turbulence patterns. SpectroCough CNN models commonly use log-mel representations as input.",
+
+  "limitations": "Log-Mel Spectrograms require significant computational resources and parameter tuning. They lose phase information and compress high-frequency resolution. Performance depends on preprocessing quality."
+}

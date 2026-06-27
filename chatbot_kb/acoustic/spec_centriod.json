@@ -1,0 +1,11 @@
+{
+  "term": "Spectral Centroid",
+
+  "definition_simple": "Spectral Centroid measures where the center of the sound’s frequency energy is located. It indicates whether a sound is dominated by low frequencies or high frequencies and is often associated with the perceived brightness of the sound.",
+
+  "definition_scientific": "Spectral Centroid is a frequency-domain feature that represents the weighted mean of the frequencies present in a signal, with spectral magnitudes as weights. It is computed as: Centroid = (sum(f_k * S[k])) / (sum(S[k])), where f_k is the frequency of bin k and S[k] is the spectral magnitude. It describes the center of mass of the spectral energy distribution and is typically computed using the Short-Time Fourier Transform (STFT) of the signal.",
+
+  "why_it_matters_in_cough_analysis": "Spectral Centroid is important in cough analysis because it reflects the distribution of energy across frequency components of respiratory sounds. Cough signals often contain significant high-frequency components due to turbulent airflow and airway obstruction, resulting in higher spectral centroid values compared to normal breathing. In systems like SpectroCough, spectral centroid helps distinguish cough vs breathing sounds, identify disease-related airway characteristics, detect respiratory abnormalities, and differentiate real coughs from low-frequency environmental noise.",
+
+  "limitations": "Spectral Centroid provides only the average frequency location and does not describe how energy is distributed around that frequency. Different sounds may share similar centroid values but have very different spectral structures. It is sensitive to noise and recording quality, especially when low-energy signals allow high-frequency components to dominate. It also cannot capture temporal variations or detailed spectral patterns, so it must be used with other features such as spectral bandwidth, MFCCs, or RMS energy."
+}

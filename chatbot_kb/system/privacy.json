@@ -1,0 +1,27 @@
+{
+  "data_collection": {
+    "audio_data": "Cough audio recordings provided by users",
+    "metadata": "Optional device or recording information"
+  },
+
+  "data_usage": [
+    "Respiratory illness pre-screening",
+    "Model inference and prediction",
+    "System performance improvement (if consent provided)"
+  ],
+
+  "data_storage": {
+    "policy": "Audio data may be processed temporarily and not permanently stored unless explicitly authorized.",
+    "security": "Secure processing pipelines and encryption should be used for stored data."
+  },
+
+  "user_rights": [
+    "Right to consent to data usage",
+    "Right to request data deletion",
+    "Right to privacy and confidentiality"
+  ],
+
+  "data_sharing": "User data is not shared with third parties without explicit consent.",
+
+  "anonymization": "Personal identifiers should be removed before analysis when possible."
+}

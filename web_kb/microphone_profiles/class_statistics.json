@@ -1,0 +1,65 @@
+{
+    "covid19": {
+        "feature_means": {
+            "rms": 0.0402188732269857,
+            "rms_std": 0.08643606858449919,
+            "zcr": 0.2579098905922328,
+            "spectral_centroid": 2149.0163351709093,
+            "spectral_bandwidth": 1115.9296110682778,
+            "spectral_rolloff": 3391.9318459125457,
+            "spectral_contrast": 16.66066449275135
+        },
+        "feature_stds": {
+            "rms": 0.010447280598231126,
+            "rms_std": 0.004305199774375371,
+            "zcr": 0.13209777613669252,
+            "spectral_centroid": 990.8602688976288,
+            "spectral_bandwidth": 460.7273530628905,
+            "spectral_rolloff": 1466.9858690382075,
+            "spectral_contrast": 2.3801945503588926
+        },
+        "num_samples": 443
+    },
+    "healthy_cough": {
+        "feature_means": {
+            "rms": 0.04358807993525917,
+            "rms_std": 0.08600514551379898,
+            "zcr": 0.30298256492014053,
+            "spectral_centroid": 2555.7923999268123,
+            "spectral_bandwidth": 1324.8288095385035,
+            "spectral_rolloff": 4030.371462543717,
+            "spectral_contrast": 17.46054627475866
+        },
+        "feature_stds": {
+            "rms": 0.010155362370380635,
+            "rms_std": 0.004043659784171463,
+            "zcr": 0.1417143695480965,
+            "spectral_centroid": 1068.2925526381523,
+            "spectral_bandwidth": 478.3805386221652,
+            "spectral_rolloff": 1553.8845272582055,
+            "spectral_contrast": 2.326993042168351
+        },
+        "num_samples": 449
+    },
+    "sneezing": {
+        "feature_means": {
+            "rms": 0.025717459895952973,
+            "rms_std": 0.08763767400536611,
+            "zcr": 0.06813052095232204,
+            "spectral_centroid": 602.683153657977,
+            "spectral_bandwidth": 302.0493109178437,
+            "spectral_rolloff": 952.2177810838865,
+            "spectral_contrast": 13.345943342603926
+        },
+        "feature_stds": {
+            "rms": 0.007435242017564383,
+            "rms_std": 0.007549875602693206,
+            "zcr": 0.039376593060253665,
+            "spectral_centroid": 325.07351830922835,
+            "spectral_bandwidth": 159.13612559214158,
+            "spectral_rolloff": 504.44326755630425,
+            "spectral_contrast": 2.6922867892439206
+        },
+        "num_samples": 449
+    }
+}

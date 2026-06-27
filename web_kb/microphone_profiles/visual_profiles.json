@@ -1,0 +1,186 @@
+{
+  "kb_version": "SC_VISUAL_PROFILES_V1",
+  "description": "Visual acoustic behavior profiles for microphone-recorded respiratory cough classes.",
+
+  "supported_classes": [
+    "covid19",
+    "healthy_cough",
+    "sneezing"
+  ],
+
+  "feature_axes": [
+    "rms",
+    "rms_std",
+    "zcr",
+    "spectral_centroid",
+    "spectral_bandwidth",
+    "spectral_rolloff",
+    "spectral_contrast"
+  ],
+
+  "visual_interpretation_rules": {
+    "higher_value": "Greater intensity or prominence in acoustic behavior",
+    "lower_value": "Reduced acoustic activity",
+    "balanced_pattern": "Feature distribution close to healthy baseline",
+    "irregular_pattern": "Uneven feature distribution indicating abnormal acoustic behavior"
+  },
+
+  "class_visual_profiles": {
+
+    "covid19": {
+
+      "waveform_characteristics":
+      "Repeated cough bursts with moderate to high amplitude variation",
+
+      "energy_distribution":
+      "Uneven energy concentration with noticeable burst-to-burst variability",
+
+      "spectral_behavior":
+      "Elevated mid and high frequency components with irregular transitions",
+
+      "acoustic_pattern":
+      "Dry cough-like behavior with repeated respiratory bursts",
+
+      "feature_visual_behavior": {
+
+        "rms":
+        "Moderate to high amplitude bursts",
+
+        "rms_std":
+        "Noticeable energy variability between cough events",
+
+        "zcr":
+        "Elevated signal transition activity",
+
+        "spectral_centroid":
+        "Shift toward higher frequency content",
+
+        "spectral_bandwidth":
+        "Moderately wide frequency spread",
+
+        "spectral_rolloff":
+        "Extended high-frequency presence",
+
+        "spectral_contrast":
+        "Moderate separation between frequency bands"
+      },
+
+      "visual_comparison_notes": {
+
+        "vs_healthy_cough":
+        "Shows greater irregularity and respiratory instability",
+
+        "vs_sneezing":
+        "Less explosive but more repetitive acoustic behavior"
+      },
+
+      "fingerprint_description":
+      "Radar pattern typically shows elevated frequency-related features with moderate energy variability."
+    },
+
+    "healthy_cough": {
+
+      "waveform_characteristics":
+      "Stable cough waveform with controlled amplitude",
+
+      "energy_distribution":
+      "Balanced energy levels across cough segments",
+
+      "spectral_behavior":
+      "Uniform frequency distribution without excessive high-frequency activity",
+
+      "acoustic_pattern":
+      "Consistent respiratory cough behavior",
+
+      "feature_visual_behavior": {
+
+        "rms":
+        "Moderate stable amplitude",
+
+        "rms_std":
+        "Low variability",
+
+        "zcr":
+        "Balanced transition activity",
+
+        "spectral_centroid":
+        "Balanced frequency center",
+
+        "spectral_bandwidth":
+        "Moderate frequency spread",
+
+        "spectral_rolloff":
+        "Natural high-frequency decay",
+
+        "spectral_contrast":
+        "Balanced band separation"
+      },
+
+      "visual_comparison_notes": {
+
+        "vs_disease_classes":
+        "More stable and uniform acoustic behavior",
+
+        "reference_baseline":
+        "Used as healthy comparison baseline"
+      },
+
+      "fingerprint_description":
+      "Radar pattern appears balanced and symmetric across all major acoustic features."
+    },
+
+    "sneezing": {
+
+      "waveform_characteristics":
+      "Very sharp transient waveform with strong peak amplitude",
+
+      "energy_distribution":
+      "Highly concentrated short-duration energy burst",
+
+      "spectral_behavior":
+      "Strong high-frequency activity and rapid transitions",
+
+      "acoustic_pattern":
+      "Explosive respiratory event with abrupt onset and decay",
+
+      "feature_visual_behavior": {
+
+        "rms":
+        "Very high amplitude peak",
+
+        "rms_std":
+        "Large energy variation",
+
+        "zcr":
+        "High transition activity",
+
+        "spectral_centroid":
+        "Elevated frequency center",
+
+        "spectral_bandwidth":
+        "Wide frequency coverage",
+
+        "spectral_rolloff":
+        "Strong high-frequency extension",
+
+        "spectral_contrast":
+        "Pronounced band separation"
+      },
+
+      "visual_comparison_notes": {
+
+        "vs_healthy_cough":
+        "Far more explosive and short-lived acoustic behavior",
+
+        "vs_covid19":
+        "Higher peak intensity but less repetitive respiratory activity"
+      },
+
+      "fingerprint_description":
+      "Radar pattern typically shows strong spikes in energy and transient-frequency features."
+    }
+  },
+
+  "visualization_summary_template":
+  "This visualization compares your microphone-recorded respiratory sound profile with known respiratory acoustic patterns to highlight similarities and deviations across major acoustic features."
+}

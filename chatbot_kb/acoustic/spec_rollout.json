@@ -1,0 +1,11 @@
+{
+  "term": "Spectral Rolloff",
+
+  "definition_simple": "Spectral Rolloff measures the frequency below which most of the sound’s energy is concentrated. It tells how much of the audio signal is made up of low-frequency versus high-frequency content.",
+
+  "definition_scientific": "Spectral Rolloff is a frequency-domain feature defined as the frequency below which a specified percentage (typically 85% or 95%) of the total spectral energy of a signal is contained. It is computed from the magnitude spectrum obtained via Short-Time Fourier Transform (STFT), and represents the percentile point of the cumulative energy distribution across frequency bins. Mathematically, the rolloff frequency f_r satisfies: sum_{k=0}^{f_r} S[k] = p * sum_{k=0}^{K} S[k], where S[k] is spectral magnitude and p is the rolloff threshold.",
+
+  "why_it_matters_in_cough_analysis": "Spectral Rolloff is important in cough analysis because respiratory sounds differ in how their energy is distributed across frequencies. Cough sounds often contain strong high-frequency components due to turbulent airflow and airway obstruction, resulting in higher rolloff values compared to breathing or background noise. In systems like SpectroCough, spectral rolloff helps distinguish cough vs non-cough sounds, detect abnormal airway turbulence, differentiate disease-related acoustic patterns, and identify noise-like cough bursts. It provides insight into the balance between low and high-frequency energy in respiratory signals.",
+
+  "limitations": "Spectral Rolloff depends on the chosen energy threshold (e.g., 85% or 95%), which may affect interpretation. It does not provide detailed information about spectral distribution beyond the cutoff frequency. Different signals may have similar rolloff values despite different spectral structures. The feature is sensitive to noise and recording conditions, and it cannot capture temporal variations or detailed frequency characteristics, so it must be combined with features such as MFCCs, spectral centroid, or bandwidth for robust analysis."
+}

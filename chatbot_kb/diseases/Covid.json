@@ -1,0 +1,51 @@
+{
+  "disease_name": "COVID-19",
+  "overview": "COVID-19 (Coronavirus Disease 2019) is an infectious disease caused by the SARS-CoV-2 virus. It emerged in late 2019 and rapidly became a global pandemic. Most people infected experience mild to moderate respiratory illness and recover without special treatment, but some develop severe illness requiring medical care. The virus spreads mainly through respiratory droplets and affects people of all ages. :contentReference[oaicite:1]{index=1}",
+  "causes": [
+    "Infection with the SARS-CoV-2 virus, a coronavirus that primarily spreads via respiratory droplets and close contact. :contentReference[oaicite:2]{index=2}",
+    "Touching surfaces contaminated with the virus followed by touching the face (mouth, nose, eyes). :contentReference[oaicite:3]{index=3}",
+    "Airborne transmission in certain settings, especially crowded indoor environments. :contentReference[oaicite:4]{index=4}"
+  ],
+  "symptoms": [
+    "Fever or chills. :contentReference[oaicite:5]{index=5}",
+    "Cough. :contentReference[oaicite:6]{index=6}",
+    "Shortness of breath or difficulty breathing. :contentReference[oaicite:7]{index=7}",
+    "Fatigue. :contentReference[oaicite:8]{index=8}",
+    "Muscle or body aches. :contentReference[oaicite:9]{index=9}",
+    "Headache. :contentReference[oaicite:10]{index=10}",
+    "Sore throat. :contentReference[oaicite:11]{index=11}",
+    "Congestion or runny nose. :contentReference[oaicite:12]{index=12}",
+    "New loss of taste or smell. :contentReference[oaicite:13]{index=13}",
+    "Nausea or vomiting, diarrhea. :contentReference[oaicite:14]{index=14}"
+  ],
+  "risk_factors": [
+    "Older age (especially 65 years and above). :contentReference[oaicite:15]{index=15}",
+    "Underlying health conditions such as cardiovascular disease, diabetes, chronic respiratory disease, and cancer. :contentReference[oaicite:16]{index=16}",
+    "Weakened immune system due to illness or immunosuppressive treatments. :contentReference[oaicite:17]{index=17}",
+    "Obesity and chronic kidney disease. :contentReference[oaicite:18]{index=18}",
+    "Children and adults with congenital or complex medical conditions. :contentReference[oaicite:19]{index=19}"
+  ],
+  "diagnosis": "COVID-19 is typically diagnosed using molecular tests (such as RT-PCR) that detect viral RNA, antigen tests for detecting viral proteins, and sometimes imaging studies like chest X-rays or CT scans for assessing lung involvement in more severe cases. Clinical evaluation and epidemiologic exposure are also considered. :contentReference[oaicite:20]{index=20}",
+  "treatment_general": "Treatment for COVID-19 depends on the severity of illness. Mild cases may require rest, hydration, and symptomatic relief. Antiviral medications and monoclonal antibodies may be recommended for those at high risk of severe disease if started early. Hospitalized patients may require oxygen therapy, corticosteroids, and supportive care. :contentReference[oaicite:21]{index=21}",
+  "prevention": "Preventive strategies include staying up to date with COVID-19 vaccinations and boosters, practicing good hand hygiene, wearing masks in high-risk settings, maintaining physical distance from sick individuals, and improving ventilation in indoor spaces. Vaccination is a key method to reduce transmission, severity, hospitalization, and death. :contentReference[oaicite:22]{index=22}",
+  "complications": [
+    "Severe pneumonia leading to respiratory failure. :contentReference[oaicite:23]{index=23}",
+    "Acute respiratory distress syndrome (ARDS). :contentReference[oaicite:24]{index=24}",
+    "Blood clots, myocarditis, and vascular inflammation. :contentReference[oaicite:25]{index=25}",
+    "Secondary bacterial infections. :contentReference[oaicite:26]{index=26}",
+    "Multisystem inflammatory syndrome (especially in children). :contentReference[oaicite:27]{index=27}"
+  ],
+  "long_term_effects": {
+    "overview": "Some individuals develop ongoing health problems after the initial infection, known as Long COVID or post-COVID conditions, which can persist for weeks or months beyond the acute illness. :contentReference[oaicite:28]{index=28}",
+    "common_symptoms": [
+      "Fatigue that interferes with daily life. :contentReference[oaicite:29]{index=29}",
+      "Brain fog and cognitive difficulties such as memory loss. :contentReference[oaicite:30]{index=30}",
+      "Shortness of breath, cough, and chest pain. :contentReference[oaicite:31]{index=31}",
+      "Sleep disturbances and mood changes. :contentReference[oaicite:32]{index=32}",
+      "Muscle and joint pain. :contentReference[oaicite:33]{index=33}"
+    ],
+    "definition": "Long COVID is defined as symptoms that continue or develop at least 3 months after the initial SARS-CoV-2 infection and last for at least 2 months without another explanation. :contentReference[oaicite:34]{index=34}"
+  },
+  "when_to_seek_medical_help": "Seek immediate medical help if you experience severe symptoms such as difficulty breathing, persistent pain or pressure in the chest, new confusion, inability to stay awake, bluish lips or face, or if symptoms worsen rapidly. Individuals with risk factors for severe illness should consult healthcare providers early. :contentReference[oaicite:35]{index=35}",
+  "disclaimer": "This system is not a medical diagnosis tool. Always consult qualified healthcare professionals for diagnosis and treatment."
+}

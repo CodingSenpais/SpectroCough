@@ -1,0 +1,11 @@
+{
+  "term": "Spectral Bandwidth",
+
+  "definition_simple": "Spectral Bandwidth measures how spread out the frequencies of a sound are. It tells how wide the range of frequencies is in an audio signal around its average frequency.",
+
+  "definition_scientific": "Spectral Bandwidth is a frequency-domain audio feature that quantifies the spread or dispersion of a signal’s spectral energy around its spectral centroid. It is typically computed as the p-th order weighted deviation of frequency bins from the spectral centroid: BW(t) = (sum_k S[k,t] * (f_k - centroid(t))^p)^(1/p), where S[k,t] represents the magnitude of the spectrum at frequency bin k and time frame t. It is analogous to the standard deviation of the spectral distribution and describes the variance of frequency components in a signal.",
+
+  "why_it_matters_in_cough_analysis": "Spectral Bandwidth is important in cough analysis because respiratory sounds differ in how their frequency energy spreads. Real coughs typically contain wide-band noise-like components due to turbulent airflow in the respiratory tract, leading to higher spectral bandwidth. In contrast, breathing or background sounds often have narrower frequency ranges. In SpectroCough-like systems, spectral bandwidth helps distinguish cough vs non-cough sounds, identify disease-specific acoustic signatures, detect airway obstruction characteristics, and differentiate genuine cough events from artificial or low-frequency noise.",
+
+  "limitations": "Spectral Bandwidth depends heavily on accurate spectral centroid estimation and is sensitive to background noise and recording quality. It does not indicate which specific frequencies are present, only their spread. Different signals with very different structures may have similar bandwidth values. It also does not capture temporal dynamics of cough patterns and must be combined with other features like MFCCs, spectral centroid, or ZCR for reliable classification."
+}

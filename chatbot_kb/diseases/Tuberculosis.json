@@ -1,0 +1,44 @@
+{
+  "disease_name": "Tuberculosis (TB)",
+  "overview": "Tuberculosis (TB) is an infectious disease caused by the bacterium *Mycobacterium tuberculosis*. It most commonly affects the lungs (pulmonary TB) but can also affect other parts of the body (extrapulmonary TB). TB spreads through the air when a person with active pulmonary TB coughs, sneezes, speaks, or sings. Despite being preventable and curable, TB remains one of the top infectious disease killers worldwide. :contentReference[oaicite:1]{index=1}",
+  "causes": [
+    "Infection by the bacterium *Mycobacterium tuberculosis*, usually transmitted via airborne droplets from an infectious person. :contentReference[oaicite:2]{index=2}",
+    "Progression from latent TB infection (where bacteria exist in the body without symptoms) to active TB disease when the immune system fails to control the bacterial growth. :contentReference[oaicite:3]{index=3}"
+  ],
+  "symptoms": [
+    "A persistent cough lasting three weeks or longer. :contentReference[oaicite:4]{index=4}",
+    "Chest pain. :contentReference[oaicite:5]{index=5}",
+    "Coughing up blood or sputum (phlegm). :contentReference[oaicite:6]{index=6}",
+    "Weakness or fatigue. :contentReference[oaicite:7]{index=7}",
+    "Unintentional weight loss. :contentReference[oaicite:8]{index=8}",
+    "Fever and night sweats. :contentReference[oaicite:9]{index=9}",
+    "Loss of appetite. :contentReference[oaicite:10]{index=10}",
+    "Symptoms related to extrapulmonary TB depending on the body part affected (e.g., blood in urine for kidney TB, headache for TB meningitis). :contentReference[oaicite:11]{index=11}"
+  ],
+  "risk_factors": [
+    "Close contact with someone who has active TB disease. :contentReference[oaicite:12]{index=12}",
+    "Living or traveling in areas where TB is common, particularly in low- and middle-income countries. :contentReference[oaicite:13]{index=13}",
+    "Weakened immune system, including HIV infection or immunosuppressive treatments. :contentReference[oaicite:14]{index=14}",
+    "Malnutrition and poverty. :contentReference[oaicite:15]{index=15}",
+    "Overcrowded living conditions such as shelters or prisons. :contentReference[oaicite:16]{index=16}",
+    "Young age (children) and older adults with weaker immunity. :contentReference[oaicite:17]{index=17}"
+  ],
+  "types": {
+    "latent_tb_infection": "TB bacteria are in the body but inactive. People with latent TB do not feel sick, have no symptoms, and cannot spread the disease. :contentReference[oaicite:18]{index=18}",
+    "active_tb_disease": "TB bacteria are active, multiply, and cause symptoms. Active TB of the lungs can be infectious. :contentReference[oaicite:19]{index=19}",
+    "pulmonary_tb": "Active TB that affects the lungs; the most common and infectious form. :contentReference[oaicite:20]{index=20}",
+    "extrapulmonary_tb": "TB that occurs outside the lungs (e.g., lymph nodes, kidneys, brain, bones). These forms are usually not infectious unless involving the airway. :contentReference[oaicite:21]{index=21}",
+    "miliary_tb": "A rare form where TB spreads throughout the body via the bloodstream. It is serious and can be fatal if untreated. :contentReference[oaicite:22]{index=22}"
+  },
+  "diagnosis": "Diagnosis may involve a combination of clinical assessment, tuberculin skin test (TST) or interferon-gamma release assays (IGRAs) for latent infection, chest X-rays, sputum microscopy and culture, and molecular tests such as nucleic acid amplification tests (NAATs). :contentReference[oaicite:23]{index=23}",
+  "treatment_general": "Treatment for drug-susceptible TB typically involves multi-drug antibiotic therapy over at least 6 months, often including isoniazid, rifampin (or rifapentine), pyrazinamide, and ethambutol. Drug-resistant TB may require longer, more complex regimens with second-line medications. Completing the full course of medications is critical to cure and prevent resistance. :contentReference[oaicite:24]{index=24}",
+  "prevention": "Prevention strategies include early detection and treatment of latent TB infection, vaccination with Bacille Calmette-Guérin (BCG) in countries where TB is common, good ventilation in crowded settings, reduced exposure to infectious individuals, and strengthening immune health. :contentReference[oaicite:25]{index=25}",
+  "complications": [
+    "Spread of infection to other organs (extrapulmonary TB). :contentReference[oaicite:26]{index=26}",
+    "Severe lung damage and respiratory failure. :contentReference[oaicite:27]{index=27}",
+    "Drug-resistant TB (multidrug-resistant or extensively drug-resistant TB). :contentReference[oaicite:28]{index=28}",
+    "TB meningitis and miliary TB, which can be fatal if untreated. :contentReference[oaicite:29]{index=29}"
+  ],
+  "when_to_seek_medical_help": "Seek medical evaluation if you experience a cough lasting longer than three weeks, coughing up blood, unexplained weight loss, persistent fever or night sweats, or if you have been exposed to someone with active TB. Early treatment is essential to prevent disease progression and transmission. :contentReference[oaicite:30]{index=30}",
+  "disclaimer": "This system is not a medical diagnosis tool. Always consult a qualified healthcare professional for diagnosis and treatment."
+}

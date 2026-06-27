@@ -1,0 +1,11 @@
+{
+  "term": "Mel Spectrogram",
+
+  "definition_simple": "A Mel Spectrogram is a visual representation of sound that shows how the energy of different frequencies changes over time using a frequency scale similar to how humans hear sound.",
+
+  "definition_scientific": "A Mel Spectrogram is a time-frequency representation of an audio signal obtained by computing the Short-Time Fourier Transform (STFT), converting the power spectrum into mel-scaled frequency bins using a filter bank, and representing the energy distribution over time. The mel scale is a nonlinear frequency scale designed to approximate human auditory perception, where frequency spacing is compressed at higher frequencies. It represents spectral energy across time using perceptually meaningful frequency bands.",
+
+  "why_it_matters_in_cough_analysis": "Mel Spectrograms are extremely important in cough analysis because they provide a detailed time-frequency representation of respiratory sounds. Cough events exhibit characteristic patterns such as broadband bursts, transient energy peaks, and turbulence signatures that become clearly visible in mel spectrograms. In SpectroCough systems, mel spectrograms are commonly used as input features for deep learning models (e.g., CNNs) to detect disease-specific acoustic signatures, classify respiratory illnesses, distinguish cough from speech or noise, and analyze temporal variations in cough structure. They provide richer information than simple features like RMS or ZCR by capturing both spectral and temporal characteristics of cough signals.",
+
+  "limitations": "Mel Spectrograms require significant computational resources and storage compared to simpler features. They depend on parameter choices such as window size, hop length, and number of mel bands, which can affect representation quality. They may also lose phase information of the signal and can be sensitive to background noise and recording conditions. Additionally, mel scaling compresses high-frequency details, which may reduce fine spectral resolution for some respiratory sound characteristics."
+}

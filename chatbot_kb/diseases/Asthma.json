@@ -1,0 +1,43 @@
+{
+  "disease_name": "Asthma",
+  "overview": "Asthma is a chronic (long-term) respiratory condition in which the airways become inflamed, narrowed, and swollen, often producing excess mucus. This makes breathing difficult and can lead to episodes of wheezing, shortness of breath, coughing, and chest tightness. Asthma symptoms can come and go and vary in severity over time, and although there is no cure, asthma can be controlled with proper management. :contentReference[oaicite:1]{index=1}",
+  "causes": [
+    "The exact cause of asthma isn’t fully known, but it likely involves a combination of genetic predisposition and environmental factors. :contentReference[oaicite:2]{index=2}",
+    "Allergens such as pollen, mold, dust mites, pet dander, and cockroach waste may trigger asthma symptoms in allergic individuals. :contentReference[oaicite:3]{index=3}",
+    "Infections, such as viral respiratory infections early in life, may influence asthma development and symptom severity. :contentReference[oaicite:4]{index=4}",
+    "Exposure to air pollution, tobacco smoke (including secondhand smoke), chemical irritants, and occupational dusts and fumes. :contentReference[oaicite:5]{index=5}",
+    "Exercise, cold air, strong odors, stress, and certain medications (e.g., aspirin or beta-blockers) can trigger asthma symptoms. :contentReference[oaicite:6]{index=6}"
+  ],
+  "symptoms": [
+    "Wheezing or a whistling sound when breathing, especially when exhaling. :contentReference[oaicite:7]{index=7}",
+    "Shortness of breath and difficulty breathing. :contentReference[oaicite:8]{index=8}",
+    "Coughing that may be worse at night or early in the morning. :contentReference[oaicite:9]{index=9}",
+    "Chest tightness, pain, or pressure. :contentReference[oaicite:10]{index=10}",
+    "Symptoms may appear periodically and can become more severe during asthma attacks. :contentReference[oaicite:11]{index=11}"
+  ],
+  "risk_factors": [
+    "Family history of asthma or allergies, especially if parents or siblings have asthma. :contentReference[oaicite:12]{index=12}",
+    "Having allergic conditions such as eczema or hay fever (atopy). :contentReference[oaicite:13]{index=13}",
+    "Exposure to secondhand smoke early in life or prenatal exposure. :contentReference[oaicite:14]{index=14}",
+    "Viral respiratory infections in early childhood that may affect airway development. :contentReference[oaicite:15]{index=15}",
+    "Occupational exposure to chemical irritants, dust, and fumes. :contentReference[oaicite:16]{index=16}"
+  ],
+  "types": {
+    "allergic_asthma": "Triggered by allergens such as pollen, pet dander, and mold. :contentReference[oaicite:17]{index=17}",
+    "exercise_induced_asthma": "Asthma symptoms triggered by physical exercise or exertion. :contentReference[oaicite:18]{index=18}",
+    "occupational_asthma": "Caused or worsened by exposure to workplace substances such as chemical fumes or dust. :contentReference[oaicite:19]{index=19}",
+    "cough_variant_asthma": "When coughing is the predominant or only symptom. :contentReference[oaicite:20]{index=20}",
+    "adult_onset_asthma": "Asthma that begins in adulthood, often with triggers different from childhood asthma. :contentReference[oaicite:21]{index=21}"
+  },
+  "diagnosis": "Asthma diagnosis typically involves a medical history, physical examination, and lung function tests such as spirometry, which measures airflow obstruction and reversibility after bronchodilator use. Other tests may include peak flow measurement, allergy testing, and monitoring symptoms over time. :contentReference[oaicite:22]{index=22}",
+  "treatment_general": "Asthma treatment aims to control symptoms, reduce airway inflammation, and prevent exacerbations. Common treatments include quick-relief (rescue) inhalers such as short-acting bronchodilators, and long-term controller medications like inhaled corticosteroids, long-acting bronchodilators, leukotriene modifiers, and biologics. Asthma action plans help tailor treatment based on symptom control levels. :contentReference[oaicite:23]{index=23}",
+  "prevention": "Although asthma can’t be cured, symptoms can be reduced by avoiding known triggers, quitting smoking, minimizing exposure to air pollution and allergens, maintaining vaccinations (e.g., flu, COVID-19), and adhering to an asthma action plan developed with a healthcare provider. :contentReference[oaicite:24]{index=24}",
+  "complications": [
+    "Acute asthma attacks that can cause severe breathing difficulty and require emergency care. :contentReference[oaicite:25]{index=25}",
+    "Respiratory infections or pneumonia due to compromised airway function. :contentReference[oaicite:26]{index=26}",
+    "Chronic airway remodeling leading to reduced lung function over time. :contentReference[oaicite:27]{index=27}",
+    "Missed school or work days and decreased quality of life due to uncontrolled symptoms. :contentReference[oaicite:28]{index=28}"
+  ],
+  "when_to_seek_medical_help": "Seek urgent medical attention if symptoms suddenly worsen, if there is severe shortness of breath, inability to speak due to breathlessness, bluish lips or face, extreme chest tightness, confusion, or if quick-relief medications are not helping during an asthma attack. Follow up with a healthcare provider for worsening or frequently recurring symptoms. :contentReference[oaicite:29]{index=29}",
+  "disclaimer": "This system is not a medical diagnosis tool. Always consult a qualified healthcare professional for medical advice."
+}

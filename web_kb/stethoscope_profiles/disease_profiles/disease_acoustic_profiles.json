@@ -1,0 +1,131 @@
+{
+  "asthma": {
+    "most_distinct_features": [
+      "spectral_bandwidth",
+      "spectral_centroid",
+      "spectral_contrast"
+    ],
+
+    "layman_cough_characteristics": [
+      "dry cough",
+      "high-pitched wheezing",
+      "tight airflow bursts",
+      "rapid breathing interruptions",
+      "whistling airflow sound"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.12890090968918808,
+      "rms_std": 0.013028981568366512,
+      "zcr": 0.49117255390770803,
+      "spectral_centroid": 1.249862754157862,
+      "spectral_bandwidth": 1.810441486810602,
+      "spectral_rolloff": 0.7112133709609514,
+      "spectral_contrast": 1.004006770824844
+    }
+  },
+
+  "bronchial": {
+    "most_distinct_features": [
+      "zcr",
+      "spectral_centroid",
+      "spectral_rolloff"
+    ],
+
+    "layman_cough_characteristics": [
+      "wet cough with mucus",
+      "frequent coughing fits",
+      "thick sounding cough",
+      "irregular cough bursts",
+      "chest congestion sound"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.17292073355761137,
+      "rms_std": 0.20076824114445743,
+      "zcr": 1.562070775549756,
+      "spectral_centroid": 1.3148284192992692,
+      "spectral_bandwidth": 0.8876228969413478,
+      "spectral_rolloff": 1.152494892727329,
+      "spectral_contrast": 0.14942580245824388
+    }
+  },
+
+  "copd": {
+    "most_distinct_features": [
+      "spectral_contrast",
+      "spectral_centroid",
+      "spectral_rolloff"
+    ],
+
+    "layman_cough_characteristics": [
+      "heavy cough bursts",
+      "mucus-filled cough",
+      "prolonged airflow sound",
+      "wheezing caused by airway narrowing",
+      "low-pitched cough due to mucus obstruction"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.01331661933700726,
+      "rms_std": 0.01932554244507889,
+      "zcr": 0.10464509828724777,
+      "spectral_centroid": 0.36954719700078137,
+      "spectral_bandwidth": 0.2157954306248521,
+      "spectral_rolloff": 0.300544404933509,
+      "spectral_contrast": 0.3849312829152755
+    }
+  },
+
+  "pneumonia": {
+    "most_distinct_features": [
+      "zcr",
+      "spectral_rolloff",
+      "spectral_centroid"
+    ],
+
+    "layman_cough_characteristics": [
+      "wet cough with fluid sounds",
+      "crackling cough bursts",
+      "heavy chest cough",
+      "short breathing interruptions",
+      "moist rattling cough"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.17118395127692998,
+      "rms_std": 0.13722222192014308,
+      "zcr": 0.6917822664422271,
+      "spectral_centroid": 0.6081649985792685,
+      "spectral_bandwidth": 0.11753748328798216,
+      "spectral_rolloff": 0.6160808953637643,
+      "spectral_contrast": 0.5512952742904577
+    }
+  },
+
+  "healthy": {
+    "most_distinct_features": [
+      "spectral_contrast",
+      "spectral_bandwidth",
+      "zcr"
+    ],
+
+    "layman_cough_characteristics": [
+      "short dry cough",
+      "clean airflow sound",
+      "single cough burst",
+      "no mucus or wheezing",
+      "balanced cough intensity"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.11732107263285692,
+      "rms_std": 0.03119149521087101,
+      "zcr": 0.48376105348706877,
+      "spectral_centroid": 0.17365213643707952,
+      "spectral_bandwidth": 0.8245606425323848,
+      "spectral_rolloff": 0.12574503133612228,
+      "spectral_contrast": 0.9870685819078938
+    }
+  }
+}

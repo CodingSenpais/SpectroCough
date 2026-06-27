@@ -1,0 +1,46 @@
+{
+  "disease_name": "Chronic Obstructive Pulmonary Disease (COPD)",
+  "overview": "Chronic Obstructive Pulmonary Disease (COPD) is a long-term lung condition that makes breathing difficult due to airflow obstruction and persistent respiratory symptoms. It encompasses diseases such as emphysema and chronic bronchitis. COPD is progressive, worsens over time, and is a leading cause of morbidity and mortality worldwide. Smoking and air pollution are key drivers of the condition. There is no cure, but treatment and lifestyle changes can manage symptoms and slow progression. COPD can also lead to serious health complications and disability. :contentReference[oaicite:1]{index=1}",
+  "causes": [
+    "Long-term exposure to irritating gases and particles, especially cigarette smoke — the most common cause of COPD. :contentReference[oaicite:2]{index=2}",
+    "Exposure to secondhand smoke over many years. :contentReference[oaicite:3]{index=3}",
+    "Occupational exposure to dusts, chemicals, and fumes. :contentReference[oaicite:4]{index=4}",
+    "Air pollution (indoor and outdoor). :contentReference[oaicite:5]{index=5}",
+    "Genetic factors such as alpha-1 antitrypsin deficiency. :contentReference[oaicite:6]{index=6}",
+    "History of respiratory infections or asthma that may damage lung tissue. :contentReference[oaicite:7]{index=7}"
+  ],
+  "symptoms": [
+    "Chronic cough, often with mucus production that persists over time. :contentReference[oaicite:8]{index=8}",
+    "Shortness of breath, especially during physical activity. :contentReference[oaicite:9]{index=9}",
+    "Wheezing or noisy breathing. :contentReference[oaicite:10]{index=10}",
+    "Chest tightness. :contentReference[oaicite:11]{index=11}",
+    "Frequent respiratory infections. :contentReference[oaicite:12]{index=12}",
+    "Fatigue and reduced exercise tolerance. :contentReference[oaicite:13]{index=13}",
+    "Symptoms typically worsen over time and especially during exacerbations. :contentReference[oaicite:14]{index=14}"
+  ],
+  "risk_factors": [
+    "Current or former smoking history. :contentReference[oaicite:15]{index=15}",
+    "Long-term exposure to secondhand smoke. :contentReference[oaicite:16]{index=16}",
+    "Chronic exposure to air pollution or workplace toxins. :contentReference[oaicite:17]{index=17}",
+    "Age over 40 years — COPD most commonly affects middle-aged and older adults. :contentReference[oaicite:18]{index=18}",
+    "Genetic susceptibility, including alpha-1 antitrypsin deficiency. :contentReference[oaicite:19]{index=19}",
+    "History of asthma or frequent childhood respiratory infections. :contentReference[oaicite:20]{index=20}"
+  ],
+  "types": {
+    "emphysema": "A type of COPD in which the air sacs (alveoli) in the lungs are damaged and lose elasticity, reducing efficient oxygen transfer. :contentReference[oaicite:21]{index=21}",
+    "chronic_bronchitis": "A form of COPD characterized by persistent inflammation of the bronchial tubes with chronic productive cough. :contentReference[oaicite:22]{index=22}",
+    "COPD_exacerbation": "A sudden worsening of symptoms such as increased breathlessness or sputum production, often due to infections or pollutant exposure. :contentReference[oaicite:23]{index=23}"
+  },
+  "diagnosis": "COPD is diagnosed based on medical history, physical examination, and lung function tests, particularly spirometry which measures airflow and obstruction (FEV1/FVC ratio). Additional tests may include chest X-rays or CT scans, oxygen saturation, and assessment of exacerbation history. :contentReference[oaicite:24]{index=24}",
+  "treatment_general": "Although there is no cure for COPD, treatment aims to relieve symptoms, slow disease progression, and improve quality of life. Therapies may include smoking cessation, bronchodilators, inhaled corticosteroids, pulmonary rehabilitation, oxygen therapy, and vaccinations (influenza, pneumococcal). Severe cases may require advanced interventions and regular monitoring. :contentReference[oaicite:25]{index=25}",
+  "prevention": "Preventive measures focus on avoiding key risk exposures: quitting smoking and avoiding secondhand smoke, reducing exposure to air pollution and occupational irritants, maintaining good respiratory hygiene, and receiving appropriate vaccinations. Early detection and lifestyle modifications can slow COPD progression. :contentReference[oaicite:26]{index=26}",
+  "complications": [
+    "Frequent exacerbations requiring medical care or hospitalization. :contentReference[oaicite:27]{index=27}",
+    "Respiratory failure requiring oxygen therapy. :contentReference[oaicite:28]{index=28}",
+    "Heart problems such as pulmonary hypertension or cor pulmonale. :contentReference[oaicite:29]{index=29}",
+    "Increased risk of lung infections and pneumonia. :contentReference[oaicite:30]{index=30}",
+    "Severe limitations in physical activity and quality of life. :contentReference[oaicite:31]{index=31}"
+  ],
+  "when_to_seek_medical_help": "Seek urgent medical attention if there is severe breathlessness, chest tightness worsening rapidly, inability to speak due to breathlessness, bluish lips or face, confusion, high fever, or if symptoms suddenly worsen. Regular follow-up is important for monitoring and managing long-term COPD progression. :contentReference[oaicite:32]{index=32}",
+  "disclaimer": "This system is not a medical diagnosis tool. Always consult qualified healthcare professionals for diagnosis and medical advice."
+}

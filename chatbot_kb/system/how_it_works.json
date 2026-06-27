@@ -1,0 +1,45 @@
+{
+  "system_pipeline": [
+    {
+      "stage": "Audio Acquisition",
+      "description": "The system records cough audio using a microphone or accepts uploaded audio files."
+    },
+    {
+      "stage": "Preprocessing",
+      "description": "Noise reduction, normalization, and voice activity detection are applied to isolate cough segments."
+    },
+    {
+      "stage": "Feature Extraction",
+      "description": "Multiple acoustic features are extracted including Mel spectrograms, MFCCs, RMS energy, and spectral descriptors to represent cough characteristics."
+    },
+    {
+      "stage": "Feature Fusion",
+      "description": "Temporal-frequency features and statistical descriptors are combined to create a robust representation of cough audio."
+    },
+    {
+      "stage": "Classification",
+      "description": "A hybrid CNN-Dense neural network analyzes features to classify respiratory conditions."
+    },
+    {
+      "stage": "Fake Cough Detection",
+      "description": "A secondary classifier identifies fake or non-genuine cough sounds."
+    },
+    {
+      "stage": "Prediction Output",
+      "description": "The system returns predicted disease category with confidence scores."
+    }
+  ],
+
+  "processing_time": "Typically under 2 seconds per prediction",
+
+  "input_requirements": [
+    "Cough audio recording",
+    "Clear recording environment recommended"
+  ],
+
+  "output": {
+    "prediction": "Detected respiratory condition",
+    "confidence_score": "Model confidence level",
+    "screening_result": "Pre-screening suggestion"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "term": "Mel Frequency Cepstral Coefficients (MFCC)",
+
+  "definition_simple": "MFCCs are features that represent the overall shape of sound frequencies in a way similar to how the human ear perceives sound. They convert audio into a small set of numbers that describe important characteristics of the sound.",
+
+  "definition_scientific": "Mel Frequency Cepstral Coefficients (MFCCs) are coefficients derived from a cepstral representation of the short-term power spectrum of a signal. They are computed by taking the Fourier transform of a signal frame, mapping the spectrum onto the nonlinear mel frequency scale, applying logarithmic compression, and performing a Discrete Cosine Transform (DCT) on the log mel spectrum. MFCCs represent the spectral envelope of audio and provide a compact representation of frequency distribution aligned with human auditory perception.",
+
+  "why_it_matters_in_cough_analysis": "MFCCs are one of the most important features in cough analysis because they capture the spectral envelope and timbre characteristics of respiratory sounds. Different respiratory diseases (such as COVID-19, pneumonia, bronchitis, or asthma) produce distinct acoustic patterns due to airway obstruction, mucus presence, and lung inflammation. MFCCs help detect disease-specific cough signatures, differentiate cough from speech or noise, classify respiratory illness types, and provide robust input features for machine learning models in systems like SpectroCough. They are widely used in speech recognition and biomedical audio classification due to their ability to represent meaningful sound characteristics efficiently.",
+
+  "limitations": "MFCCs primarily capture spectral envelope information and may lose detailed temporal information about when specific frequencies occur. They can be sensitive to background noise and recording conditions, requiring normalization or preprocessing. MFCCs also depend on parameter choices such as window size and number of coefficients. Additionally, they assume short-term signal stationarity and may not fully represent highly non-stationary cough events without complementary features such as spectrograms or temporal features."
+}

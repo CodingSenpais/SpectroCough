@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SpectroCough</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-body">
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <main class="login-container">
+        <div class="glass-card auth-card">
+            
+            <div class="auth-header">
+                <i class="fa-solid fa-user-doctor auth-icon"></i>
+                <h2 id="form-title">Welcome Back</h2>
+                <p id="form-subtitle">Enter your credentials to access the screening tool.</p>
+            </div>
+
+            <form id="login-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <input type="email" id="login-email" class="glass-input" placeholder="doctor@hospital.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="login-pass">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="login-pass" class="glass-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="glass-btn primary-btn full-width">
+                    Login <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </button>
+
+                <p class="toggle-auth">
+                    New to SpectroCough? <span onclick="showSignup()">Sign Up Here</span>
+                </p>
+            </form>
+
+            <form id="signup-form" class="hidden" onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="signup-name" class="glass-input" placeholder="Dr. John Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <input type="email" id="signup-email" class="glass-input" placeholder="doctor@hospital.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-pass">Create Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="signup-pass" class="glass-input" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="glass-btn primary-btn full-width">
+                    Create Account <i class="fa-solid fa-user-plus"></i>
+                </button>
+
+                <p class="toggle-auth">
+                    Already have an account? <span onclick="showLogin()">Login Here</span>
+                </p>
+            </form>
+
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>

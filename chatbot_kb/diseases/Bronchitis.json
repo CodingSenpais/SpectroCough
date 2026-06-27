@@ -1,0 +1,41 @@
+{
+  "disease_name": "Bronchitis",
+  "overview": "Bronchitis is an inflammation of the bronchial tubes, the airways that carry air to and from the lungs. This inflammation causes coughing and mucus production. Bronchitis can be acute (short-term) or chronic (long-term). Acute bronchitis often follows a cold or viral infection and usually improves within a few weeks. Chronic bronchitis is persistent and usually part of chronic obstructive pulmonary disease (COPD). The condition is characterized by frequent coughing, mucus production, shortness of breath, and chest discomfort. :contentReference[oaicite:1]{index=1}",
+  "causes": [
+    "Viral infections such as the common cold, influenza, RSV, or COVID-19 — the most common cause of acute bronchitis. :contentReference[oaicite:2]{index=2}",
+    "Bacterial infections, especially in people with underlying lung disease. :contentReference[oaicite:3]{index=3}",
+    "Irritants such as tobacco smoke, air pollution, dust, chemical fumes, and other environmental exposures. :contentReference[oaicite:4]{index=4}",
+    "Smoking, the leading cause of chronic bronchitis. :contentReference[oaicite:5]{index=5}",
+    "Repeated episodes of acute bronchitis or ongoing exposure to irritants. :contentReference[oaicite:6]{index=6}"
+  ],
+  "symptoms": [
+    "Persistent cough (productive or dry). :contentReference[oaicite:7]{index=7}",
+    "Mucus (sputum) production which may be clear, white, yellow, or green. :contentReference[oaicite:8]{index=8}",
+    "Sore throat and chest discomfort. :contentReference[oaicite:9]{index=9}",
+    "Shortness of breath and wheezing. :contentReference[oaicite:10]{index=10}",
+    "Fatigue or feeling tired. :contentReference[oaicite:11]{index=11}",
+    "Mild fever and chills in acute bronchitis. :contentReference[oaicite:12]{index=12}",
+    "Symptoms persisting for weeks (acute) or recurring frequently (chronic). :contentReference[oaicite:13]{index=13}"
+  ],
+  "risk_factors": [
+    "Smoking cigarettes or exposure to secondhand smoke. :contentReference[oaicite:14]{index=14}",
+    "Frequent exposure to dust, fumes, chemicals, and air pollution. :contentReference[oaicite:15]{index=15}",
+    "People with asthma or other respiratory conditions. :contentReference[oaicite:16]{index=16}",
+    "Older adults and very young children. :contentReference[oaicite:17]{index=17}",
+    "People with weakened immune systems or underlying health issues. :contentReference[oaicite:18]{index=18}"
+  ],
+  "types": {
+    "acute_bronchitis": "A short-term inflammation of the bronchial tubes, often following a cold or viral infection and lasting a few weeks. Antibiotics are usually not recommended because most are viral in origin. :contentReference[oaicite:19]{index=19}",
+    "chronic_bronchitis": "A long-term condition defined by a productive cough most days for at least three months per year for two consecutive years. It is typically caused by smoking and is part of chronic obstructive pulmonary disease (COPD). :contentReference[oaicite:20]{index=20}"
+  },
+  "diagnosis": "Bronchitis is usually diagnosed through a medical history and physical examination, including listening to the lungs with a stethoscope. Tests may include chest X-rays to rule out pneumonia, sputum tests, pulmonary function tests (spirometry), and oxygen saturation measurements. :contentReference[oaicite:21]{index=21}",
+  "treatment_general": "Acute bronchitis often resolves on its own. Treatment focuses on symptom relief such as rest, fluids, and over-the-counter pain relievers. Inhalers or bronchodilators may be used for wheezing. Antibiotics are generally not recommended for acute bronchitis. Chronic bronchitis may require bronchodilators, steroids, pulmonary rehabilitation, vaccinations, and oxygen therapy. Smoking cessation is crucial. :contentReference[oaicite:22]{index=22}",
+  "prevention": "Prevention includes quitting smoking, avoiding secondhand smoke and lung irritants, frequent handwashing, staying up-to-date with vaccinations (flu and pneumococcal vaccines), and practicing good respiratory hygiene. :contentReference[oaicite:23]{index=23}",
+  "complications": [
+    "Pneumonia, when the infection spreads deeper into the lungs. :contentReference[oaicite:24]{index=24}",
+    "Exacerbation of asthma or COPD. :contentReference[oaicite:25]{index=25}",
+    "Chronic airflow obstruction and long-term breathing problems in chronic bronchitis. :contentReference[oaicite:26]{index=26}"
+  ],
+  "when_to_seek_medical_help": "Seek medical care if cough lasts more than three weeks, if there is coughing up blood, worsening shortness of breath, high fever, severe chest pain, confusion, or bluish lips. People with chronic lung diseases or other serious conditions should consult a healthcare provider early. :contentReference[oaicite:27]{index=27}",
+  "disclaimer": "This system is not a medical diagnosis tool. Consult a qualified healthcare professional for medical advice."
+}

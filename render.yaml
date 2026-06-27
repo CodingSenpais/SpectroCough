@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: spectrocough
+    runtime: python
+
+    plan: free
+
+    rootDir: .
+
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+
+    startCommand: python -m api.api_server
+
+    autoDeploy: true
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.5"
+
+      - key: FLASK_ENV
+        value: production
+
+      - key: GROQ_API_KEY
+        sync: false
+
+      - key: GROQ_MODEL
+        value: llama-3.3-70b-versatile

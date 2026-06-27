@@ -1,0 +1,11 @@
+{
+  "term": "Chroma Features",
+
+  "definition_simple": "Chroma features represent how sound energy is distributed across different pitch classes or musical notes.",
+
+  "definition_scientific": "Chroma features are spectral descriptors that map the entire frequency spectrum into 12 pitch classes corresponding to the musical scale. They aggregate spectral energy belonging to frequencies separated by octaves into a single coefficient, producing a pitch class profile known as a chromagram.",
+
+  "why_it_matters_in_cough_analysis": "Although mainly used in music processing, chroma features can help analyze harmonic structure and periodic components of respiratory sounds. In cough analysis, they may help differentiate harmonic vocal sounds from non-harmonic cough bursts, detect periodic airway vibrations, and support advanced acoustic pattern analysis.",
+
+  "limitations": "Chroma features are designed for musical pitch analysis and may provide limited usefulness for noise-like respiratory signals. They do not capture detailed spectral shape or temporal information and are less informative for non-harmonic cough sounds."
+}

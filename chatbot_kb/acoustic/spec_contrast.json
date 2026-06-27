@@ -1,0 +1,11 @@
+{
+  "term": "Spectral Contrast",
+
+  "definition_simple": "Spectral Contrast measures the difference between the loudest and quietest parts of the sound spectrum. It shows how much variation exists between strong and weak frequency components in an audio signal.",
+
+  "definition_scientific": "Spectral Contrast is a frequency-domain feature that measures the difference in energy between spectral peaks and spectral valleys within different frequency sub-bands of a signal. Each frame of a spectrogram is divided into multiple frequency bands, and the contrast is computed by comparing the mean energy of the highest-energy components (peaks) with the lowest-energy components (valleys). It quantifies the distribution and variation of spectral energy across frequency bands and reflects the signal’s harmonic and noise structure.",
+
+  "why_it_matters_in_cough_analysis": "Spectral Contrast is important in cough analysis because respiratory sounds contain both harmonic components and turbulent noise components. Cough signals often show strong differences between peak and valley energies due to airflow turbulence, mucus vibration, and airway obstruction. In SpectroCough systems, spectral contrast helps differentiate cough from breathing or background noise, detect abnormal respiratory acoustic patterns, identify disease-related changes in airway structure, and improve classification of respiratory conditions by capturing the balance between harmonic and noisy spectral regions.",
+
+  "limitations": "Spectral Contrast depends on how frequency bands are divided and may vary with parameter selection such as number of bands and window size. It can be sensitive to background noise and recording conditions, which may reduce peak-valley distinction. It does not provide precise information about individual frequency components or temporal variations. Additionally, signals with different spectral structures may produce similar contrast values, so it must be used alongside other features such as MFCCs, spectral centroid, or bandwidth for robust analysis."
+}

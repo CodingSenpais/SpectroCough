@@ -1,0 +1,11 @@
+{
+  "term": "Short-Time Energy (STE)",
+
+  "definition_simple": "Short-Time Energy measures how strong or powerful a sound is within a short time window. It shows how the loudness of a signal changes over time.",
+
+  "definition_scientific": "Short-Time Energy (STE) is a time-domain feature that measures the signal energy within a short analysis frame. It is defined as the sum of squared amplitudes of the signal samples within a window: E(n) = sum(x[m]^2 * w[n-m]), where x[m] is the signal and w[n] is the window function. It captures temporal variations in signal amplitude and is widely used for detecting transient events in audio signals.",
+
+  "why_it_matters_in_cough_analysis": "Short-Time Energy is crucial in cough analysis because cough events produce sudden bursts of high energy compared to breathing or silence. It helps detect cough onset, segment cough signals, identify cough phases, measure cough intensity, and differentiate real coughs from low-energy background sounds. In SpectroCough systems, STE supports event detection and temporal analysis of respiratory sounds.",
+
+  "limitations": "STE does not provide frequency information and only measures signal power. It is sensitive to background noise and recording conditions. Different sounds may have similar energy levels despite different spectral structures, so it must be combined with spectral features for reliable classification."
+}

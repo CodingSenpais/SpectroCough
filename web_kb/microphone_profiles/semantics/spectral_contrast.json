@@ -1,0 +1,37 @@
+{
+    "feature_name": "spectral_contrast",
+    "description": "Spectral Contrast (Peak-Valley Frequency Separation)",
+
+    "layman_explanation": "Spectral contrast measures how clearly the loud parts of the cough sound stand out from the quieter background parts. A higher value means the cough has strong, well-defined sound components. A lower value means the sound is flatter or more noise-like.",
+
+    "scientific_explanation": "Spectral contrast quantifies the difference between spectral peaks and valleys across predefined frequency bands. It captures the relative separation between dominant harmonic components and background spectral energy. Higher contrast indicates well-defined spectral structures, while lower contrast suggests flatter, noise-dominated spectra.",
+
+    "physiological_context": "Cough sounds are shaped by airflow turbulence, airway obstruction, mucus interaction, and glottal vibration patterns. Strong harmonic structures may produce higher contrast, while diffuse turbulence or broadband noise may reduce contrast by flattening spectral peaks.",
+
+"dataset_context": "In SpectroCough Panel 2, spectral contrast is statistically modeled across microphone-recorded respiratory sound classes including covid19, healthy_cough, and sneezing. This feature captures differences between dominant spectral peaks and valleys within the cough signal. Deviations are interpreted relative to the class-specific baseline distribution derived from the microphone training dataset.",
+
+    "deviation_logic": {
+        "very_high": "The cough exhibits significantly stronger separation between dominant frequencies and background energy than typical samples of this class. This suggests highly structured spectral components.",
+        "moderately_high": "The cough shows somewhat elevated spectral definition relative to the class baseline.",
+        "normal_range": "The spectral peak-to-valley separation falls within the expected statistical range for this class.",
+        "moderately_low": "The cough has slightly flatter spectral characteristics than average for this class.",
+        "very_low": "The cough spectrum is significantly flatter and more noise-dominated compared to the class baseline."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "Spectral contrast should be interpreted together with bandwidth and rolloff. High contrast combined with high bandwidth may indicate strong harmonic structure within turbulent airflow. Contrast alone does not determine class membership but contributes to acoustic texture differentiation.",
+
+    "counterfactual_template": "To better match the target class profile, the spectral contrast would need to {direction} toward that class's statistical mean.",
+
+    "visualization_note": "In radar visualization, spectral contrast represents the texture richness or harmonic definition of the cough signal.",
+
+    "tooltip": "Separation between dominant frequencies and background noise."
+}

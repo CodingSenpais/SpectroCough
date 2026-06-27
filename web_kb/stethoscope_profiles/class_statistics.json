@@ -1,0 +1,107 @@
+{
+    "asthma": {
+        "feature_means": {
+            "rms": 0.08291261784163201,
+            "rms_std": 0.052742126203762986,
+            "zcr": 0.003961214361980738,
+            "spectral_centroid": 65.90573857890234,
+            "spectral_bandwidth": 134.71318249238863,
+            "spectral_rolloff": 110.56442374653287,
+            "spectral_contrast": 15.898533115784327
+        },
+        "feature_stds": {
+            "rms": 0.011957624028564552,
+            "rms_std": 0.01343685976081106,
+            "zcr": 0.0021267545959304224,
+            "spectral_centroid": 32.366969489956375,
+            "spectral_bandwidth": 121.98872951080389,
+            "spectral_rolloff": 52.64287423376966,
+            "spectral_contrast": 0.8713808115189351
+        },
+        "num_samples": 288
+    },
+    "bronchial": {
+        "feature_means": {
+            "rms": 0.08263625516198002,
+            "rms_std": 0.05447086154554899,
+            "zcr": 0.011675034101174857,
+            "spectral_centroid": 263.34988979192883,
+            "spectral_bandwidth": 645.3956980705261,
+            "spectral_rolloff": 364.55166919414813,
+            "spectral_contrast": 16.41603092963879
+        },
+        "feature_stds": {
+            "rms": 0.008280646271051363,
+            "rms_std": 0.010459548120544827,
+            "zcr": 0.012101659600691922,
+            "spectral_centroid": 167.9238680537303,
+            "spectral_bandwidth": 306.7201386351167,
+            "spectral_rolloff": 308.755222670435,
+            "spectral_contrast": 1.0539995665720068
+        },
+        "num_samples": 104
+    },
+    "copd": {
+        "feature_means": {
+            "rms": 0.0838054796016573,
+            "rms_std": 0.05269121306662696,
+            "zcr": 0.006199638761331483,
+            "spectral_centroid": 190.57689843689118,
+            "spectral_bandwidth": 518.2339659046354,
+            "spectral_rolloff": 248.44736152515745,
+            "spectral_contrast": 16.273418847462185
+        },
+        "feature_stds": {
+            "rms": 0.007750744586877411,
+            "rms_std": 0.010816371422078678,
+            "zcr": 0.004284503774452676,
+            "spectral_centroid": 153.95136332079966,
+            "spectral_bandwidth": 397.9103776695484,
+            "spectral_rolloff": 268.52496368590016,
+            "spectral_contrast": 0.7279543881413689
+        },
+        "num_samples": 401
+    },
+    "pneumonia": {
+        "feature_means": {
+            "rms": 0.08479659303761365,
+            "rms_std": 0.051737916508787556,
+            "zcr": 0.0032075447222348627,
+            "spectral_centroid": 115.30719088504189,
+            "spectral_bandwidth": 455.14159048649304,
+            "spectral_rolloff": 123.52913281624777,
+            "spectral_contrast": 16.840357750340512
+        },
+        "feature_stds": {
+            "rms": 0.006228852722744268,
+            "rms_std": 0.008453031195121401,
+            "zcr": 0.001437343143095318,
+            "spectral_centroid": 42.02061353939688,
+            "spectral_bandwidth": 175.3056758980911,
+            "spectral_rolloff": 49.20946504430723,
+            "spectral_contrast": 0.6716945473702443
+        },
+        "num_samples": 285
+    },
+    "healthy": {
+        "feature_means": {
+            "rms": 0.08445843426804793,
+            "rms_std": 0.05259526658215021,
+            "zcr": 0.003989058591362397,
+            "spectral_centroid": 175.4958101717153,
+            "spectral_bandwidth": 633.459440761939,
+            "spectral_rolloff": 190.35238937148475,
+            "spectral_contrast": 17.104243493617926
+        },
+        "feature_stds": {
+            "rms": 0.005020516283159973,
+            "rms_std": 0.00737084170424386,
+            "zcr": 0.003530333064943496,
+            "spectral_centroid": 84.89685029679245,
+            "spectral_bandwidth": 181.0586058792339,
+            "spectral_rolloff": 172.62110715041516,
+            "spectral_contrast": 0.4597043234832072
+        },
+        "num_samples": 133
+    }
+}

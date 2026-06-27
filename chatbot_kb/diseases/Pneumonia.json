@@ -1,0 +1,45 @@
+{
+  "disease_name": "Pneumonia",
+  "overview": "Pneumonia is a form of acute respiratory infection that affects one or both lungs and can range from mild to life-threatening. It most commonly occurs when the air sacs (alveoli) fill with pus and fluid, limiting oxygen intake. Pneumonia is caused by a variety of infectious agents, including bacteria, viruses, and fungi, and is spread by direct contact or inhalation of respiratory secretions. It is one of the leading causes of infectious death worldwide, particularly among children under 5 and older adults. Vaccination and healthy living practices can reduce risk. :contentReference[oaicite:1]{index=1}",
+  "causes": [
+    "Bacterial infections including *Streptococcus pneumoniae*, *Mycoplasma pneumoniae*, *Chlamydia pneumoniae*, and *Haemophilus influenzae*. :contentReference[oaicite:2]{index=2}",
+    "Viral infections such as influenza, COVID-19, respiratory syncytial virus (RSV), human metapneumovirus, and rhinovirus. :contentReference[oaicite:3]{index=3}",
+    "Fungal causes, particularly in immunocompromised individuals. :contentReference[oaicite:4]{index=4}",
+    "Inhalation of infectious droplets or exposure to carriers who transmit germs by coughing or sneezing. :contentReference[oaicite:5]{index=5}"
+  ],
+  "symptoms": [
+    "Cough with or without phlegm. :contentReference[oaicite:6]{index=6}",
+    "Fever, chills, or sweating. :contentReference[oaicite:7]{index=7}",
+    "Chest pain during breathing or coughing. :contentReference[oaicite:8]{index=8}",
+    "Shortness of breath or rapid breathing. :contentReference[oaicite:9]{index=9}",
+    "Fatigue or feeling very tired. :contentReference[oaicite:10]{index=10}",
+    "Nausea, vomiting, or diarrhea. :contentReference[oaicite:11]{index=11}",
+    "Confusion, especially in older adults. :contentReference[oaicite:12]{index=12}"
+  ],
+  "risk_factors": [
+    "Children under age 5 and adults age 65 and older. :contentReference[oaicite:13]{index=13}",
+    "Chronic medical conditions such as heart disease, liver disease, lung disease, or diabetes. :contentReference[oaicite:14]{index=14}",
+    "Weakened immune system due to HIV, immunosuppressive drugs or other conditions. :contentReference[oaicite:15]{index=15}",
+    "Behaviors such as smoking, excessive alcohol use, and living or working in crowded settings. :contentReference[oaicite:16]{index=16}",
+    "Exposure to people who are sick with respiratory infections. :contentReference[oaicite:17]{index=17}",
+    "Seasonal factors like increased spread of respiratory infections during fall and winter. :contentReference[oaicite:18]{index=18}"
+  ],
+  "types": {
+    "community_acquired_pneumonia": "Occurs outside a healthcare setting and is typically caused by community pathogens. :contentReference[oaicite:19]{index=19}",
+    "healthcare_associated_pneumonia": "Develops in individuals in a healthcare facility, often with bacteria resistant to common antibiotics. :contentReference[oaicite:20]{index=20}",
+    "ventilator_associated_pneumonia": "Occurs in hospitalized patients on mechanical ventilation. :contentReference[oaicite:21]{index=21}",
+    "aspiration_pneumonia": "Triggered by inhalation of food, saliva or vomit into the lungs. :contentReference[oaicite:22]{index=22}"
+  },
+  "diagnosis": "Pneumonia diagnosis typically involves a medical history, physical exam (including listening to the lungs), chest X-ray imaging, blood tests, sputum cultures, and oxygen saturation measurement. Identifying the specific infectious agent helps guide appropriate treatment. :contentReference[oaicite:23]{index=23}",
+  "treatment_general": "Treatment depends on the cause. Bacterial pneumonia is treated with antibiotics; viral pneumonia may involve antiviral medications or supportive care; fungal pneumonia requires antifungal therapy. Supportive treatments include hydration, rest, oxygen therapy if needed, and cough management. Severe cases may require hospitalization. :contentReference[oaicite:24]{index=24}",
+  "prevention": "Prevention strategies include vaccination (against influenza, pneumococcal bacteria and other pathogens), practicing good hand hygiene, avoiding smoking, maintaining a healthy lifestyle, and reducing exposure to respiratory infections. Vaccination remains a key method for preventing pneumococcal pneumonia. :contentReference[oaicite:25]{index=25}",
+  "complications": [
+    "Respiratory failure requiring mechanical ventilation. :contentReference[oaicite:26]{index=26}",
+    "Sepsis and systemic infection. :contentReference[oaicite:27]{index=27}",
+    "Pleural effusion or empyema (infection around the lungs). :contentReference[oaicite:28]{index=28}",
+    "Lung abscesses (pockets of pus). :contentReference[oaicite:29]{index=29}",
+    "Increased mortality risk in vulnerable populations (children, elderly, immunocompromised). :contentReference[oaicite:30]{index=30}"
+  ],
+  "when_to_seek_medical_help": "Seek immediate medical help if symptoms are severe, such as trouble breathing, persistent chest pain, confusion, cyanosis (bluish lips or face), inability to stay hydrated, or if symptoms rapidly worsen. High-risk individuals should consult a healthcare provider early. :contentReference[oaicite:31]{index=31}",
+  "disclaimer": "This system is not a medical diagnosis tool. Always consult a qualified healthcare professional for diagnosis and treatment."
+}

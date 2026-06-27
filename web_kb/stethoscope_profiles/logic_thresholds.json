@@ -1,0 +1,235 @@
+{
+  "kb_version": "SC_LOGIC_THRESHOLDS_V1",
+  "description": "Statistical decision thresholds derived from class statistics using mean ± k*std logic. Used for counterfactual reasoning and what-if analysis.",
+
+  "global_settings": {
+    "threshold_formula": "mean ± k * std",
+    "default_k_value": 2.0,
+    "statistical_confidence_region": "approx_95_percent",
+    "notes": "Thresholds define statistical decision sensitivity regions for acoustic features."
+  },
+
+  "supported_classes": [
+    "asthma",
+    "bronchial",
+    "copd",
+    "pneumonia",
+    "healthy"
+  ],
+
+  "features": [
+    "rms",
+    "rms_std",
+    "zcr",
+    "spectral_centroid",
+    "spectral_bandwidth",
+    "spectral_rolloff",
+    "spectral_contrast"
+  ],
+
+  "decision_rules": {
+    "range_interpretation": {
+      "below_lower_threshold": "Feature value significantly lower than class distribution",
+      "within_threshold_range": "Feature value consistent with class distribution",
+      "above_upper_threshold": "Feature value significantly higher than class distribution"
+    },
+
+    "counterfactual_logic": {
+      "shift_toward_target_mean": "Feature adjustment toward target class mean increases probability of class shift",
+      "large_deviation": "Large deviations contribute strongly to alternate classification",
+      "boundary_crossing": "Crossing statistical threshold indicates potential decision boundary change"
+    }
+  },
+
+  "class_threshold_templates": {
+    "asthma": {
+      "rms": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "rms_std": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "zcr": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_centroid": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "spectral_bandwidth": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_rolloff": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_contrast": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      }
+    },
+
+    "bronchial": {
+      "rms": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "rms_std": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "zcr": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "spectral_centroid": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_bandwidth": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_rolloff": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_contrast": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "low"
+      }
+    },
+
+    "copd": {
+      "rms": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "rms_std": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "zcr": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_centroid": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_bandwidth": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "spectral_rolloff": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_contrast": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "low"
+      }
+    },
+
+    "pneumonia": {
+      "rms": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "very_high"
+      },
+      "rms_std": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "zcr": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_centroid": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "spectral_bandwidth": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_rolloff": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "spectral_contrast": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      }
+    },
+
+    "healthy": {
+      "rms": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "high"
+      },
+      "rms_std": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "zcr": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_centroid": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_bandwidth": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "medium"
+      },
+      "spectral_rolloff": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "low"
+      },
+      "spectral_contrast": {
+        "threshold_type": "statistical_range",
+        "k_value": 2.0,
+        "decision_sensitivity": "low"
+      }
+    }
+  }
+}

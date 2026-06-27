@@ -1,0 +1,82 @@
+{
+  "covid19": {
+
+    "most_distinct_features": [
+      "zcr",
+      "spectral_centroid",
+      "spectral_rolloff"
+    ],
+
+    "layman_cough_characteristics": [
+      "dry repetitive cough",
+      "persistent cough bursts",
+      "rough respiratory airflow",
+      "short repeated coughing episodes",
+      "fatigue-like cough pattern"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.75,
+      "rms_std": 0.62,
+      "zcr": 1.45,
+      "spectral_centroid": 1.38,
+      "spectral_bandwidth": 0.88,
+      "spectral_rolloff": 1.21,
+      "spectral_contrast": 0.71
+    }
+  },
+
+  "healthy_cough": {
+
+    "most_distinct_features": [
+      "spectral_contrast",
+      "spectral_bandwidth",
+      "rms"
+    ],
+
+    "layman_cough_characteristics": [
+      "short clean cough",
+      "balanced cough intensity",
+      "stable airflow sound",
+      "single cough burst",
+      "no obvious respiratory irregularities"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 0.81,
+      "rms_std": 0.43,
+      "zcr": 0.52,
+      "spectral_centroid": 0.61,
+      "spectral_bandwidth": 0.84,
+      "spectral_rolloff": 0.49,
+      "spectral_contrast": 1.02
+    }
+  },
+
+  "sneezing": {
+
+    "most_distinct_features": [
+      "rms",
+      "zcr",
+      "spectral_rolloff"
+    ],
+
+    "layman_cough_characteristics": [
+      "explosive respiratory burst",
+      "sudden high intensity event",
+      "sharp transient sound",
+      "forceful airflow release",
+      "brief but powerful respiratory event"
+    ],
+
+    "distinctiveness_scores": {
+      "rms": 1.82,
+      "rms_std": 1.56,
+      "zcr": 1.63,
+      "spectral_centroid": 1.11,
+      "spectral_bandwidth": 0.95,
+      "spectral_rolloff": 1.72,
+      "spectral_contrast": 0.88
+    }
+  }
+}

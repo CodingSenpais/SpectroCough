@@ -1,0 +1,11 @@
+{
+  "term": "Zero Crossing Rate (ZCR)",
+
+  "definition_simple": "Zero Crossing Rate measures how often an audio signal changes from positive to negative or negative to positive. It represents how frequently the sound waveform crosses the zero amplitude line and gives an idea of how noisy or high-frequency a sound is.",
+
+  "definition_scientific": "Zero Crossing Rate (ZCR) is a time-domain feature that quantifies the rate at which the sign of a discrete signal changes within a frame. It is mathematically defined as: ZCR = (1/(N-1)) * sum(|sign(x[n]) - sign(x[n-1])| / 2), where x[n] represents signal samples and N is the frame length. It measures the number of times a signal crosses the zero amplitude axis and is related to the signal’s frequency content and noisiness.",
+
+  "why_it_matters_in_cough_analysis": "ZCR is highly useful in cough analysis because cough sounds often contain turbulent airflow and noise-like characteristics that produce rapid waveform sign changes. Real coughs typically show higher ZCR than breathing or silence. It helps detect cough events, distinguish cough from speech or background noise, identify abnormal respiratory acoustics, and detect fake cough-like sounds. In SpectroCough systems, ZCR assists in cough segmentation, noise detection, and classification of respiratory conditions by capturing the sharpness and transient nature of cough bursts.",
+
+  "limitations": "Zero Crossing Rate does not measure signal energy or amplitude strength and cannot distinguish between different signals that have similar crossing rates. It is sensitive to noise and recording artifacts, which can artificially increase ZCR values. It also provides limited frequency detail and cannot capture spectral distribution or timbre information. Therefore, ZCR must be combined with other features such as RMS energy, MFCCs, or spectral features for robust cough classification."
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpectroCough | AI Respiratory Pre-Screening</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <!-- ===== INTRO VIDEO OVERLAY ===== -->
+    <div id="intro-overlay">
+        <video id="intro-video" autoplay muted playsinline>
+            <source src="assets/video_animation/intro.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-left">
+            <div class="logo-container">
+                <img src="assets/sc_icon.png" class="logo-icon-img" alt="logo">
+                <span class="logo-text">SpectroCough</span>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="#" class="nav-link locked" onclick="checkAccess('screening.html')">Screening <i class="fa-solid fa-lock"></i></a>
+            <a href="#" class="nav-link locked" onclick="checkAccess('report.html')">Report <i class="fa-solid fa-lock"></i></a>
+            <a href="about.html" class="nav-link">About Us</a>
+        </div>
+
+        <div class="nav-right">
+            <button id="auth-btn" class="glass-btn" onclick="window.location.href='login.html'">
+                Login <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            </button>
+            <div id="user-profile" style="display: none;">
+                <span id="user-name">User</span>
+                <button onclick="logout()" class="icon-btn"><i class="fa-solid fa-power-off"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-left">
+            <h1 class="hero-title">SpectroCough</h1>
+            <h3 class="hero-tagline">Resonance. Resolution. Respiratory Health.</h3>
+            <p class="hero-desc">
+                An advanced AI-driven pre-screening tool utilizing Mel-Acoustic Fusion to detect respiratory anomalies. 
+                Combining spectral data with deep learning for rapid, contactless assessment.
+            </p>
+            <button class="glass-btn glass-btn-large hero-cta sc-btn" onclick="checkAccess('screening.html')">
+                <span>Start Screening</span>
+            </button>
+        </div>
+
+        <div class="hero-right">
+            <!-- <div class="model-glow"></div> -->
+            <div class="model-container">
+               <model-viewer 
+                    src="assets/3d_model/glassy_lungs.glb" 
+                    alt="3D Model" 
+                    auto-rotate 
+                    disable-zoom
+                    disable-pan
+                    interaction-prompt="none"
+                    shadow-intensity="1" 
+                    style="width: 100%; height: 570px; background-color: transparent;">
+                </model-viewer>
+            </div>
+        </div>
+    </header>
+
+    <section class="features-section reveal-on-scroll">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/diseases.png" alt="Disease">
+                </div>
+                <div class="card-body">
+                    <h4>Multi-Disease</h4>
+                    <p>Detects COVID, Asthma, Bronchitis, COPD & Pneumonia</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/stethoscope.png" alt="Stethoscope">
+                </div>
+                <div class="card-body">
+                    <h4>Stethoscopic Input</h4>
+                    <p>Accepts Stethoscope Recorded Audio</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/mic.png" alt="Microphone">
+                </div>
+                <div class="card-body">
+                    <h4>Microphone Input</h4>
+                    <p>Accepts Microphone Recorded Audio</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/plus.png" alt="AID">
+                </div>
+                <div class="card-body">
+                    <h4>Pre-Screening</h4>
+                    <p>Priortize . Isolate . Supportive Evidence.</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/sheild.png" alt="robust">
+                </div>
+                <div class="card-body">
+                    <h4>Non-Cough Detection</h4>
+                    <p>Keeps the System Robust</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/lab.png" alt="Explanation">
+                </div>
+                <div class="card-body">
+                    <h4>Explanatory Labs</h4>
+                    <p>Laymann's & Scientific Explanations</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/eye.png" alt="visual_aids">
+                </div>
+                <div class="card-body">
+                    <h4>Visual Aids</h4>
+                    <p>Comparative Visualisations</p>
+                </div>
+            </div>
+
+            <div class="glass-card feature-card pop-effect">
+                <div class="card-img-top">
+                    <img src="assets/home_glassy/brain.png" alt="logic">
+                </div>
+                <div class="card-body">
+                    <h4>CounterFactual Analysis</h4>
+                    <p>Answers What-If Changes?</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="steps-section reveal-on-scroll">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+
+            <div class="step-box animate-step" style="--i:1;">1. Login</div>
+            <div class="step-arrow">→</div>
+
+            <div class="step-box animate-step" style="--i:2;">2. Inject Audio</div>
+            <div class="step-arrow">→</div>
+
+            <div class="step-box animate-step" style="--i:3;">3. AI Analysis</div>
+            <div class="step-arrow">→</div>
+
+            <div class="step-box animate-step" style="--i:4;">4. Get Report</div>
+
+        </div>
+    </section>
+
+    <section class="metrics-section">
+        <div class="metric-box">
+            <h3>1,240</h3>
+            <p>Users Visited</p>
+        </div>
+        <div class="glass-box metric-box">
+            <h3>8,500+</h3>
+            <p>Audio Uploads</p>
+        </div>
+        <div class="glass-box metric-box">
+            <h3>5,300</h3>
+            <p>Reports Generated</p>
+        </div>
+        <div class="glass-box metric-box">
+            <h3>83%</h3>
+            <p>Model Accuracy</p>
+        </div>
+    </section>
+
+    <footer class="glass-footer">
+        <p class="disclaimer-note">
+            <strong>Note:</strong> This is a pre-screening tool and not a medical diagnostic product. 
+            Use it for pre-screening only; consulting doctors is highly recommended.
+        </p>
+    </footer>
+
+    <div class="chatbot-system">
+        <div class="chatbot-trigger" onclick="openChatOverlay()">
+            <model-viewer 
+                src="assets/3d_model/coughie.glb"
+                alt="Chatbot" 
+                disable-zoom 
+                disable-tap
+                interaction-prompt="none"
+                class="tiny-bot">
+            </model-viewer>
+        </div>
+        <br>
+        <div class="chatbot-label">Coughie</div>
+
+        <div id="coughie-overlay" class="chat-overlay hidden">
+            <div class="overlay-backdrop" onclick="closeChatOverlay()"></div>
+            
+            <div class="chat-interface-wrapper">
+                <!-- <div class="chat-model-container">
+                    <model-viewer 
+                        src="coughie.glb" 
+                        alt="Big Coughie" 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;">
+                    </model-viewer>
+                </div> -->
+
+                <div class="chat-model-container">
+                    <video id="coughie-video"
+                           autoplay
+                           muted
+                           playsinline
+                           preload="auto"
+                           class="coughie-video">
+                        <source src="assets/video_animation/coughie_greeting.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="chat-box-main">
+                    <div class="chat-header">
+                        <div class="header-info">
+
+                            <h3>Coughie Assistant</h3>
+
+                            <span class="status">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </span>
+
+                        </div>
+
+                        <button class="close-btn" onclick="closeChatOverlay()">
+                            ×
+                        </button>
+                    </div>
+                    
+                    <div class="chat-content" id="chat-content-area">
+                        <div class="bot-msg">Hello! I'm Coughie. How can I assist with your screening today?</div>
+                        
+                        <div class="chat-templates">
+                            <button onclick="sendTemplate('How do I start screening?')">How do I start screening?</button>
+                            <button onclick="sendTemplate('What is SpectroCough?')">What is SpectroCough?</button>
+                            <button onclick="sendTemplate('What do the results mean?')">What do the results mean?</button>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-zone">
+                        <input type="text" id="user-input" placeholder="Type your query here...">
+                        <button class="send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

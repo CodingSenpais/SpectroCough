@@ -1,0 +1,11 @@
+{
+  "term": "Spectral Flux",
+
+  "definition_simple": "Spectral Flux measures how quickly the sound’s frequency content changes over time.",
+
+  "definition_scientific": "Spectral Flux is a feature that quantifies the rate of change of the power spectrum between successive frames. It is typically computed as the L2 norm of the difference between normalized spectral magnitudes of consecutive frames, capturing temporal variations in spectral distribution.",
+
+  "why_it_matters_in_cough_analysis": "Spectral Flux is important in cough analysis because cough signals contain rapid temporal changes and transient bursts. It helps detect cough onset, identify sudden acoustic changes, differentiate cough from steady breathing, and capture dynamic respiratory patterns. In SpectroCough, spectral flux helps characterize cough timing and turbulence variations.",
+
+  "limitations": "Spectral Flux is sensitive to noise and may produce high values for unrelated background disturbances. It depends on frame size and normalization choices and does not describe overall spectral structure."
+}

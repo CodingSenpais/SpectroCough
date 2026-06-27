@@ -1,0 +1,11 @@
+{
+  "term": "Spectral Flatness",
+
+  "definition_simple": "Spectral Flatness measures how noise-like or tone-like a sound is. It shows whether the sound has uniform energy across frequencies or concentrated peaks.",
+
+  "definition_scientific": "Spectral Flatness, also called Wiener entropy or tonality coefficient, is defined as the ratio of the geometric mean to the arithmetic mean of the power spectrum. It quantifies how evenly spectral energy is distributed across frequency bins. Values close to 1 indicate noise-like signals, while values close to 0 indicate tonal signals.",
+
+  "why_it_matters_in_cough_analysis": "Spectral Flatness is useful in cough analysis because cough sounds often resemble broadband noise due to turbulent airflow in airways. Higher flatness values indicate noise-like cough bursts, while breathing or speech may show more tonal structure. In SpectroCough systems, spectral flatness helps distinguish cough from speech, detect airway turbulence, and identify abnormal respiratory acoustics.",
+
+  "limitations": "Spectral Flatness does not indicate which frequencies are present or how energy changes over time. It is sensitive to noise and depends on accurate spectral estimation. Different signals may have similar flatness values despite different structures."
+}

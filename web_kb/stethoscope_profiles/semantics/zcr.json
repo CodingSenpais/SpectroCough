@@ -1,0 +1,37 @@
+{
+    "feature_name": "zcr",
+    "description": "Zero Crossing Rate (ZCR)",
+
+    "layman_explanation": "Zero Crossing Rate measures how frequently the cough waveform rapidly switches direction. A higher value suggests a sharper, noisier, or more turbulent cough sound. A lower value indicates a smoother and more stable sound pattern.",
+
+    "scientific_explanation": "Zero Crossing Rate (ZCR) quantifies how often the signal waveform crosses the zero amplitude axis within a given time frame. It reflects high-frequency components and rapid oscillatory behavior. Elevated ZCR values are often associated with noise-like characteristics and turbulent airflow, while lower values correspond to smoother, more periodic acoustic patterns.",
+
+    "physiological_context": "Cough turbulence is influenced by airflow velocity, airway narrowing, mucus obstruction, and irregular glottal vibration. High turbulence creates rapid pressure fluctuations in the airway, producing increased high-frequency acoustic components and therefore higher zero-crossing rates.",
+
+    "dataset_context": "In SpectroCough, ZCR is statistically modeled per disease class. Certain respiratory conditions may exhibit greater turbulence or irregular airflow patterns, resulting in higher average ZCR values. Deviations are interpreted relative to the class-specific baseline distribution derived from the training dataset.",
+
+    "deviation_logic": {
+        "very_high": "The cough waveform shows significantly higher oscillatory activity than typical samples of this class. This suggests increased turbulence or high-frequency noise components.",
+        "moderately_high": "The cough exhibits somewhat elevated waveform irregularity compared to the class baseline.",
+        "normal_range": "The waveform oscillation rate falls within the expected statistical range for this class.",
+        "moderately_low": "The cough shows less high-frequency variation than typical samples of this class.",
+        "very_low": "The waveform oscillation rate is significantly lower than the class baseline, indicating smoother acoustic behavior."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "ZCR should be interpreted alongside RMS and spectral features. High ZCR combined with elevated spectral bandwidth or contrast may indicate increased turbulence. ZCR alone does not determine disease class but contributes to the acoustic signature pattern.",
+
+    "counterfactual_template": "To resemble the target class more closely, the waveform irregularity (ZCR) would need to {direction} toward the statistical baseline of that class.",
+
+    "visualization_note": "In radar visualization, ZCR reflects acoustic sharpness and turbulence relative to the class baseline.",
+
+    "tooltip": "Waveform irregularity and turbulence indicator."
+}

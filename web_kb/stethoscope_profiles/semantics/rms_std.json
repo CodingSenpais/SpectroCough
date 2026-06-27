@@ -1,0 +1,37 @@
+{
+    "feature_name": "rms_std",
+    "description": "Standard Deviation of RMS Energy",
+
+    "layman_explanation": "RMS standard deviation measures how much the loudness of the cough changes over time. A higher value means the cough has sharp bursts and strong intensity fluctuations. A lower value means the cough is more steady and uniform.",
+
+    "scientific_explanation": "RMS standard deviation quantifies the variability of signal energy across frames. While RMS mean captures overall intensity, RMS standard deviation captures how dynamically the energy changes during the cough event. High RMS variability indicates transient bursts and irregular amplitude modulation, whereas low RMS variability reflects more uniform energy distribution across time.",
+
+    "physiological_context": "Coughs often consist of explosive bursts followed by decay phases. Variability in energy can reflect airway obstruction patterns, mucus presence, airflow turbulence, or irregular glottal opening. Highly irregular cough bursts may correspond to unstable expiratory airflow or airway resistance fluctuations.",
+
+    "dataset_context": "In SpectroCough, each disease class has a characteristic RMS variability distribution derived from training data. Some conditions may exhibit more abrupt cough bursts, while others may show smoother amplitude envelopes. Deviation is interpreted relative to the statistical baseline of the predicted class.",
+
+    "deviation_logic": {
+        "very_high": "The cough energy fluctuates significantly more than typical samples of this class. This suggests highly irregular or burst-like energy patterns.",
+        "moderately_high": "The cough shows somewhat elevated variability in energy compared to the class baseline.",
+        "normal_range": "The energy variation falls within the statistically expected range for this class.",
+        "moderately_low": "The cough energy varies less than average for this class.",
+        "very_low": "The cough exhibits unusually stable or uniform energy patterns compared to the expected baseline."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "RMS variability should be interpreted alongside spectral features and ZCR. High variability alone does not define a disease class but contributes to the overall acoustic signature pattern.",
+
+    "counterfactual_template": "To align with the target class profile, the temporal variability of cough intensity would need to {direction} toward the statistical baseline of that class.",
+
+    "visualization_note": "In radar visualization, RMS standard deviation reflects the dynamic burstiness of the cough signal.",
+
+    "tooltip": "Energy variability across the cough duration."
+}

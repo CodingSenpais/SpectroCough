@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Logic Engine | SpectroCough</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+</head>
+<body>
+
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-left">
+            <div class="logo-container">
+                <img src="assets/sc_icon.png" class="logo-icon-img" alt="logo">
+                <span class="logo-text">SpectroCough</span>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="screening.html" class="nav-link">Screening</a>
+            <a href="report.html" class="nav-link">Report</a>
+            <a href="result.html" class="nav-link">Result</a>
+            <a href="explanatory.html" class="nav-link secondary-link">Lab</a>
+            <a href="visual_aids.html" class="nav-link secondary-link">Visuals</a>
+            <a href="what_changed.html" class="nav-link active secondary-link">Logic</a>
+        </div>
+
+        <div class="nav-right">
+            <div id="user-profile">
+                <span id="user-name">Dr. User</span>
+                <button onclick="logout()" class="icon-btn"><i class="fa-solid fa-power-off"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="logic-container">
+        
+        <div class="logic-header">
+            <h1 class="page-title">Counterfactual Logic Engine</h1>
+            <!-- <p class="subtitle">AI Decision Boundary Analysis ("What-If" Scenarios)</p> -->
+        </div>
+
+        <div class="logic-grid" id="logic-container">
+            
+            <!-- Dynamic counterfactual results will be injected here -->
+
+        </div>
+
+    </main>
+
+    <footer class="glass-footer">
+        <p class="disclaimer-note">
+            <strong>Note:</strong> Logic statements are based on model decision boundaries. Not absolute clinical rules.
+        </p>
+    </footer>
+
+    <div class="chatbot-system">
+        <div class="chatbot-trigger" onclick="openChatOverlay()">
+            <model-viewer 
+                src="assets/3d_model/coughie.glb"
+                alt="Chatbot" 
+                disable-zoom 
+                disable-tap
+                interaction-prompt="none"
+                class="tiny-bot">
+            </model-viewer>
+        </div>
+        <br>
+        <div class="chatbot-label">Coughie</div>
+
+        <div id="coughie-overlay" class="chat-overlay hidden">
+            <div class="overlay-backdrop" onclick="closeChatOverlay()"></div>
+            
+            <div class="chat-interface-wrapper">
+                <!-- <div class="chat-model-container">
+                    <model-viewer 
+                        src="coughie.glb" 
+                        alt="Big Coughie" 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;">
+                    </model-viewer>
+                </div> -->
+
+                <div class="chat-model-container">
+                    <video id="coughie-video"
+                           autoplay
+                           muted
+                           playsinline
+                           preload="auto"
+                           class="coughie-video">
+                        <source src="assets/video_animation/coughie_greeting.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="chat-box-main">
+                    <div class="chat-header">
+                        <div class="header-info">
+
+                            <h3>Coughie Assistant</h3>
+
+                            <span class="status">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </span>
+
+                        </div>
+
+                        <button class="close-btn" onclick="closeChatOverlay()">
+                            ×
+                        </button>
+                    </div>
+                    
+                    <div class="chat-content" id="chat-content-area">
+                        <div class="bot-msg">Hello! I'm Coughie. How can I assist with your screening today?</div>
+                        
+                        <div class="chat-templates">
+                            <button onclick="sendTemplate('How do I start screening?')">How do I start screening?</button>
+                            <button onclick="sendTemplate('What is SpectroCough?')">What is SpectroCough?</button>
+                            <button onclick="sendTemplate('What do the results mean?')">What do the results mean?</button>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-zone">
+                        <input type="text" id="user-input" placeholder="Type your query here...">
+                        <button class="send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>

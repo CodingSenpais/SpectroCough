@@ -1,0 +1,37 @@
+{
+    "feature_name": "spectral_bandwidth",
+    "description": "Spectral Bandwidth (Frequency Spread Around Centroid)",
+
+    "layman_explanation": "Spectral bandwidth measures how wide or spread out the cough sound frequencies are. A higher value means the cough contains a wide range of frequencies. A lower value means the sound is concentrated within a narrower frequency band.",
+
+    "scientific_explanation": "Spectral bandwidth quantifies the dispersion of frequency components around the spectral centroid. It measures the weighted standard deviation of the frequency distribution. Larger bandwidth values indicate broader spectral spread and greater frequency diversity, while smaller values reflect concentration of energy within a narrow frequency region.",
+
+    "physiological_context": "Broad frequency spread may reflect complex airflow turbulence, airway obstruction variability, or multiple simultaneous acoustic sources within the respiratory tract. Narrow bandwidth may indicate smoother airflow or dominant frequency concentration.",
+
+"dataset_context": "In SpectroCough Panel 2, spectral bandwidth is statistically modeled across microphone-recorded respiratory sound classes including covid19, healthy_cough, and sneezing. This feature reflects how broadly acoustic energy is distributed across frequencies within a cough event. Deviations are interpreted relative to the class-specific baseline distribution derived from the microphone training dataset.",
+
+    "deviation_logic": {
+        "very_high": "The cough exhibits significantly broader frequency dispersion than typical samples of this class. This suggests increased acoustic complexity or turbulence.",
+        "moderately_high": "The frequency spread is somewhat wider than the class baseline.",
+        "normal_range": "The spectral spread falls within the statistically expected range for this class.",
+        "moderately_low": "The cough has slightly narrower frequency dispersion than average for this class.",
+        "very_low": "The frequency distribution is significantly more concentrated than the expected class baseline."
+    },
+
+    "z_score_reference": {
+        "formula": "z = (x - μ) / σ",
+        "very_high_threshold": 2.0,
+        "moderately_high_threshold": 1.0,
+        "normal_band": 0.5,
+        "moderately_low_threshold": -1.0,
+        "very_low_threshold": -2.0
+    },
+
+    "interpretation_guidance": "Spectral bandwidth should be interpreted together with centroid and contrast. High bandwidth combined with high centroid may indicate intense turbulence. Bandwidth alone does not determine class membership but contributes to the multidimensional acoustic profile.",
+
+    "counterfactual_template": "To better align with the target class profile, the frequency dispersion (bandwidth) would need to {direction} toward the statistical baseline of that class.",
+
+    "visualization_note": "In radar visualization, spectral bandwidth reflects the width or dispersion dimension of the cough’s frequency content.",
+
+    "tooltip": "Spread of frequency energy around the centroid."
+}

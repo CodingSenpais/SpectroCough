@@ -1,0 +1,211 @@
+[
+  {
+    "id": "faq_001",
+    "question": "What is SpectroCough?",
+    "answer": "SpectroCough is an AI-powered respiratory illness pre-screening system that analyzes cough audio to detect patterns associated with respiratory conditions such as pneumonia, asthma, bronchitis, and other cough types. It provides supportive evidence and is not a medical diagnosis tool.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_002",
+    "question": "Is this a medical diagnosis?",
+    "answer": "No. SpectroCough is a pre-screening and triage tool that provides supportive evidence based on cough audio analysis. It does not replace professional medical evaluation.",
+    "category": "medical_disclaimer"
+  },
+
+  {
+    "id": "faq_003",
+    "question": "How does SpectroCough work?",
+    "answer": "The system processes cough audio using signal preprocessing, feature extraction, Mel spectrogram and MFCC analysis, and a hybrid deep learning model. It then predicts the most likely cough category and provides confidence scores.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_004",
+    "question": "What diseases can the system detect?",
+    "answer": "The system can classify coughs into categories such as pneumonia, asthma, bronchitis, and normal cough. It also detects fake or non-genuine cough sounds.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_005",
+    "question": "How accurate is the prediction?",
+    "answer": "Prediction accuracy depends on audio quality, background noise, and cough characteristics. The system provides confidence scores to indicate prediction reliability.",
+    "category": "prediction"
+  },
+
+  {
+    "id": "faq_006",
+    "question": "What does the confidence score mean?",
+    "answer": "The confidence score represents how strongly the AI model believes the predicted class matches the input cough pattern. Higher values indicate higher prediction certainty.",
+    "category": "prediction"
+  },
+
+  {
+    "id": "faq_007",
+    "question": "What does 'Not Recognised' mean?",
+    "answer": "The input audio did not match known cough patterns or had low prediction confidence. This may occur due to noise, unclear cough recording, or non-cough audio.",
+    "category": "prediction"
+  },
+
+  {
+    "id": "faq_008",
+    "question": "What is fake cough detection?",
+    "answer": "The system detects intentional or non-genuine cough sounds such as throat clearing, sneezing, or artificial coughs to improve prediction reliability.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_009",
+    "question": "How long should the cough recording be?",
+    "answer": "A clear cough recording of approximately 2 to 5 seconds is recommended for reliable analysis.",
+    "category": "usage"
+  },
+
+  {
+    "id": "faq_010",
+    "question": "What audio formats are supported?",
+    "answer": "Common audio formats such as WAV are recommended for best performance.",
+    "category": "usage"
+  },
+
+  {
+    "id": "faq_011",
+    "question": "Can background noise affect results?",
+    "answer": "Yes. Background noise or poor recording quality can affect feature extraction and reduce prediction accuracy.",
+    "category": "limitations"
+  },
+
+  {
+    "id": "faq_012",
+    "question": "Can this system be used for real-time screening?",
+    "answer": "Yes. The system is optimized for real-time cough analysis and produces predictions within seconds.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_013",
+    "question": "What features are extracted from cough audio?",
+    "answer": "The system extracts acoustic features such as RMS energy, spectral bandwidth, zero crossing rate, spectral centroid, and spectral contrast to analyze cough characteristics.",
+    "category": "technical"
+  },
+
+  {
+    "id": "faq_014",
+    "question": "What is RMS energy?",
+    "answer": "RMS energy measures the strength or intensity of the cough sound signal.",
+    "category": "technical"
+  },
+
+  {
+    "id": "faq_015",
+    "question": "What is spectral bandwidth?",
+    "answer": "Spectral bandwidth measures the range of frequencies present in the cough sound.",
+    "category": "technical"
+  },
+
+  {
+    "id": "faq_016",
+    "question": "What is Zero Crossing Rate?",
+    "answer": "Zero Crossing Rate measures how frequently the audio waveform changes direction, indicating signal sharpness.",
+    "category": "technical"
+  },
+
+  {
+    "id": "faq_017",
+    "question": "What is a cough fingerprint?",
+    "answer": "A cough fingerprint is a visual representation of acoustic features that describes the unique characteristics of a cough.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_018",
+    "question": "How fast is the prediction process?",
+    "answer": "The system typically produces predictions in under a few seconds depending on system performance.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_019",
+    "question": "Is my audio data stored?",
+    "answer": "Audio storage depends on system configuration. The system may process audio temporarily for analysis and does not require permanent storage.",
+    "category": "privacy"
+  },
+
+  {
+    "id": "faq_020",
+    "question": "Can children use this system?",
+    "answer": "The system is designed for general cough analysis and may not be validated for all age groups.",
+    "category": "limitations"
+  },
+
+  {
+    "id": "faq_021",
+    "question": "Can device microphone quality affect results?",
+    "answer": "Yes. Recording quality and microphone sensitivity can influence feature extraction accuracy.",
+    "category": "limitations"
+  },
+
+  {
+    "id": "faq_022",
+    "question": "Does the system work offline?",
+    "answer": "Offline functionality depends on deployment configuration.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_023",
+    "question": "Why does the system reject some inputs?",
+    "answer": "Inputs may be rejected if they contain noise, non-cough sounds, or insufficient acoustic information.",
+    "category": "prediction"
+  },
+
+  {
+    "id": "faq_024",
+    "question": "What is the purpose of this system?",
+    "answer": "The system provides rapid respiratory health screening support and helps prioritize medical evaluation.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_025",
+    "question": "Can this system replace medical tests like X-ray or PCR?",
+    "answer": "No. It provides early screening support and cannot replace clinical diagnostic tests.",
+    "category": "medical_disclaimer"
+  },
+
+  {
+    "id": "faq_026",
+    "question": "How is the AI model trained?",
+    "answer": "The model is trained on labeled cough datasets using deep learning techniques to learn acoustic patterns associated with different cough categories.",
+    "category": "technical"
+  },
+
+  {
+    "id": "faq_027",
+    "question": "Can environmental factors affect cough sound?",
+    "answer": "Yes. Environment, device type, and recording conditions can influence acoustic characteristics.",
+    "category": "limitations"
+  },
+
+  {
+    "id": "faq_028",
+    "question": "Why is this system useful?",
+    "answer": "It enables fast, contactless respiratory screening and supports early intervention, especially in resource-limited settings.",
+    "category": "system"
+  },
+
+  {
+    "id": "faq_029",
+    "question": "Does the system support telemedicine use?",
+    "answer": "Yes. The system can support remote health monitoring using cough audio analysis.",
+    "category": "application"
+  },
+
+  {
+    "id": "faq_030",
+    "question": "What happens if prediction confidence is low?",
+    "answer": "Low confidence indicates uncertainty in classification and users may be asked to provide a clearer recording.",
+    "category": "prediction"
+  }
+]

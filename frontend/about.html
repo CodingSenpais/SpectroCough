@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SpectroCough</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+</head>
+<body>
+
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-left">
+            <div class="logo-container">
+                <img src="assets/sc_icon.png" class="logo-icon-img" alt="Spectrocough logo">
+                <span class="logo-text">SpectroCough</span>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link locked" onclick="checkAccess('screening.html')">Screening <i class="fa-solid fa-lock"></i></a>
+            <a href="#" class="nav-link locked" onclick="checkAccess('report.html')">Report <i class="fa-solid fa-lock"></i></a>
+            <a href="about.html" class="nav-link active">About Us</a>
+        </div>
+
+        <div class="nav-right">
+            <div id="user-profile">
+                <span id="user-name">Dr. User</span>
+                <button onclick="logout()" class="icon-btn"><i class="fa-solid fa-power-off"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-container">
+        
+        <section class="about-hero animate-fade-up">
+            <h1 class="page-title">About SpectroCough</h1>
+            <p class="about-desc">
+                SpectroCough is a state-of-the-art <strong>Diagnostic Support, Pre-screening System</strong> engineered to bridge the gap between acoustic signal processing and deep learning. 
+                It functions as a non-invasive, rapid pre-screening tool that analyzes respiratory audio signatures to identify distinct pathological patterns.
+            </p>
+        </section>
+
+        <section class="info-section animate-fade-up" style="animation-delay: 0.2s;">
+            <h2 class="section-title">The Resolution</h2>
+            <div class="glass-panel resolve-box">
+                <div class="resolve-item">
+                    <i class="fa-solid fa-virus-slash resolve-icon"></i>
+                    <div class="resolve-text">
+                        <h3>Contactless Screening</h3>
+                        <p>Eliminates the risk of infectious transmission between patient and doctor during initial diagnosis.</p>
+                    </div>
+                </div>
+                <div class="resolve-item">
+                    <i class="fa-solid fa-stopwatch resolve-icon"></i>
+                    <div class="resolve-text">
+                        <h3>Latency Reduction</h3>
+                        <p>Reduces diagnosis time from hours (traditional lab tests) to seconds using Edge AI inference.</p>
+                    </div>
+                </div>
+                <div class="resolve-item">
+                    <i class="fa-solid fa-wave-square resolve-icon"></i>
+                    <div class="resolve-text">
+                        <h3>Non-Invasive Analysis</h3>
+                        <p>Analyzes cough acoustics without blood tests, imaging, or any physical contact.</p>
+                    </div>
+                </div>
+
+                <div class="resolve-item">
+                    <i class="fa-solid fa-brain resolve-icon"></i>
+                    <div class="resolve-text">
+                        <h3>AI Assisted Decisions</h3>
+                        <p>Combines deep learning with acoustic biomarkers to support rapid respiratory pre-screening.</p>
+                    </div>
+                </div>
+
+                <div class="resolve-item">
+                    <i class="fa-solid fa-chart-line resolve-icon"></i>
+                    <div class="resolve-text">
+                        <h3>Explainable Predictions</h3>
+                        <p>Provides confidence scores, acoustic deviations, visual evidence and AI-generated explanations.</p>
+                    </div>
+                </div>
+
+                <div class="resolve-item">
+                    <i class="fa-solid fa-shield-heart resolve-icon"></i>
+                    <div class="resolve-text">
+                        <h3>Early Risk Identification</h3>
+                        <p>Prioritizes potentially affected individuals for further clinical investigation and medical attention.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class="tech-section animate-fade-up" style="animation-delay: 0.4s;">
+            <h2 class="section-title">The Architecture</h2>
+            <div class="tech-grid">
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-file-audio tech-icon"></i>
+                    <h3>1. Audio Acquisition</h3>
+                    <p>Respiratory cough audio is captured through either a digital stethoscope or a standard microphone.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-filter tech-icon"></i>
+                    <h3>2. Pre-processing</h3>
+                    <p>Audio is standardized, normalized, denoised and trimmed to remove irrelevant silence.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-wave-square tech-icon"></i>
+                    <h3>3. Feature Extraction</h3>
+                    <p>MFCC, RMS, ZCR, Spectral Centroid, Bandwidth and Roll-off are extracted.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-chart-area tech-icon"></i>
+                    <h3>4. Spectrogram Generation</h3>
+                    <p>Mel-Spectrogram representations are generated to capture time-frequency information.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-brain tech-icon"></i>
+                    <h3>5. Hybrid AI Inference</h3>
+                    <p>Deep CNN and Dense Neural Networks classify respiratory conditions from extracted features.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-percent tech-icon"></i>
+                    <h3>6. Confidence Analysis</h3>
+                    <p>The system computes disease probabilities and identifies the highest confidence prediction.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-flask tech-icon"></i>
+                    <h3>7. Explainable AI</h3>
+                    <p>Dynamic LLM explanations describe acoustic biomarkers in both scientific and layman terminology.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-code-branch tech-icon"></i>
+                    <h3>8. Counterfactual Logic</h3>
+                    <p>The decision boundary engine identifies how acoustic features must change to reach another diagnosis.</p>
+                </div>
+                <div class="glass-card tech-card">
+                    <i class="fa-solid fa-file-pdf tech-icon"></i>
+                    <h3>9. Report Generation</h3>
+                    <p>Interactive reports combine probabilities, explanations, acoustic metrics and AI interpretations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2 class="section-title">The Engineering Team</h2>
+            
+            <div class="developers-grid">
+                
+                <div class="stage">
+                    <div class="card-wrapper">
+                        <article class="dev-card" id="dev-1">
+                            <div class="card-face face-primary">
+                                <img src="assets/about_us/harshal_img.jpg" alt="Harshal" class="profile-img">
+                            </div>
+                            <div class="card-face face-secondary">
+                                <div class="content">
+                                    <h2 class="dev-name">Harshal Jadhav</h2>
+                                    <p class="dev-role">AI Full Stack Dev & Lead</p>
+                                    <div class="dev-socials"><i class="fa-brands fa-github"></i> <i class="fa-brands fa-linkedin"></i></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="stage">
+                    <div class="card-wrapper">
+                        <article class="dev-card" id="dev-2">
+                            <div class="card-face face-primary">
+                                <img src="assets/about_us/aryan_img.jpg" alt="Aryan" class="profile-img">
+                            </div>
+                            <div class="card-face face-secondary">
+                                <div class="content">
+                                    <h2 class="dev-name">Aryan Gaikwad</h2>
+                                    <p class="dev-role">AI Full Stack Dev & Co-Lead</p>
+                                    <div class="dev-socials"><i class="fa-brands fa-github"></i> <i class="fa-brands fa-linkedin"></i></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="stage">
+                    <div class="card-wrapper">
+                        <article class="dev-card" id="dev-3">
+                            <div class="card-face face-primary">
+                                <img src="assets/about_us/mayank_img.jpg" alt="Mayank" class="profile-img">
+                            </div>
+                            <div class="card-face face-secondary">
+                                <div class="content">
+                                    <h2 class="dev-name">Mayank Lahare</h2>
+                                    <p class="dev-role">Flutter Dev</p>
+                                    <div class="dev-socials"><i class="fa-brands fa-github"></i> <i class="fa-brands fa-linkedin"></i></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="glass-footer">
+        <p class="disclaimer-note">
+            <strong>Note:</strong> Developed for academic research purposes. Not for commercial medical use.
+        </p>
+    </footer>
+
+    <div class="chatbot-system">
+        <div class="chatbot-trigger" onclick="openChatOverlay()">
+            <model-viewer 
+                src="assets/3d_model/coughie.glb"
+                alt="Chatbot" 
+                disable-zoom 
+                disable-tap
+                interaction-prompt="none"
+                class="tiny-bot"
+                style="background:transparent;">
+            </model-viewer>
+        </div>
+        <br>
+        <div class="chatbot-label">Coughie</div>
+
+        <div id="coughie-overlay" class="chat-overlay hidden">
+            <div class="overlay-backdrop" onclick="closeChatOverlay()"></div>
+            
+            <div class="chat-interface-wrapper">
+                <!-- <div class="chat-model-container">
+                    <model-viewer 
+                        src="coughie.glb" 
+                        alt="Big Coughie" 
+                        interaction-prompt="none"
+                        shadow-intensity="1"
+                        style="width: 100%; height: 100%;">
+                    </model-viewer>
+                </div> -->
+
+                <div class="chat-model-container">
+                    <video id="coughie-video"
+                           autoplay
+                           muted
+                           playsinline
+                           preload="auto"
+                           class="coughie-video">
+                        <source src="assets/video_animation/coughie_greeting.webm" type="video/webm">
+                    </video>
+                </div>
+
+                <div class="chat-box-main">
+                    <div class="chat-header">
+                        <div class="header-info">
+
+                            <h3>Coughie Assistant</h3>
+
+                            <span class="status">
+                                <i class="fa-solid fa-circle"></i>
+                                Online
+                            </span>
+
+                        </div>
+
+                        <button class="close-btn" onclick="closeChatOverlay()">
+                            ×
+                        </button>
+                    </div>
+                    
+                    <div class="chat-content" id="chat-content-area">
+                        <div class="bot-msg">Hello! I'm Coughie. How can I assist with your screening today?</div>
+                        
+                        <div class="chat-templates">
+                            <button onclick="sendTemplate('How do I start screening?')">How do I start screening?</button>
+                            <button onclick="sendTemplate('What is SpectroCough?')">What is SpectroCough?</button>
+                            <button onclick="sendTemplate('What do the results mean?')">What do the results mean?</button>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-zone">
+                        <input type="text" id="user-input" placeholder="Type your query here...">
+                        <button class="send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
