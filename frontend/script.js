@@ -503,7 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initScrollReveal();
 
-    showProcessingOverlay(type);
+    // showProcessingOverlay(type);
 
     window.addEventListener("scroll", handleMetricsOnScroll);
     handleMetricsOnScroll();
