@@ -1300,7 +1300,6 @@ async function loadReportHistory() {
 /* =========================================
    6. REPORT PAGE LOGIC
    ========================================= */
-
 async function downloadPDF() {
 
     const { jsPDF } = window.jspdf;
@@ -1328,13 +1327,59 @@ async function downloadPDF() {
 
     let y = 20;
 
+    /* =======================================
+       HEADER FUNCTION (Callable on new pages)
+    ======================================= */
+    function drawHeader() {
+        doc.setFillColor(
+            14,
+            165,
+            233
+        );
+
+        doc.rect(
+            0,
+            0,
+            PAGE_WIDTH,
+            28,
+            "F"
+        );
+
+        doc.setTextColor(
+            255,
+            255,
+            255
+        );
+
+        doc.setFont(
+            "helvetica",
+            "bold"
+        );
+
+        doc.setFontSize(18);
+
+        doc.text(
+            "SpectroCough AI Report",
+            14,
+            17
+        );
+
+        doc.setFontSize(9);
+
+        doc.text(
+            "Respiratory Acoustic Screening Report",
+            14,
+            23
+        );
+    }
+
     function addPageIfNeeded(extra = 15) {
 
         if (y + extra > PAGE_HEIGHT - 20) {
 
             doc.addPage();
-
-            y = 20;
+            drawHeader();
+            y = 40; // Start below the header on new pages
         }
     }
 
@@ -1376,9 +1421,7 @@ async function downloadPDF() {
     }
 
     function normalText(text) {
-
-        addPageIfNeeded(10);
-
+        // We set font first so splitTextToSize measures correctly
         doc.setFontSize(10);
         doc.setFont(
             "helvetica",
@@ -1397,60 +1440,24 @@ async function downloadPDF() {
                 180
             );
 
-        doc.text(
-            wrapped,
-            14,
-            y
-        );
-
-        y += wrapped.length * 5 + 4;
+        // Fix: Loop through lines to allow pagination mid-paragraph
+        wrapped.forEach(line => {
+            addPageIfNeeded(6);
+            doc.text(
+                line,
+                14,
+                y
+            );
+            y += 5;
+        });
+        
+        y += 4; // Add small margin after paragraph
     }
 
     /* =======================================
-       HEADER
+       INITIAL HEADER
     ======================================= */
-
-    doc.setFillColor(
-        14,
-        165,
-        233
-    );
-
-    doc.rect(
-        0,
-        0,
-        PAGE_WIDTH,
-        28,
-        "F"
-    );
-
-    doc.setTextColor(
-        255,
-        255,
-        255
-    );
-
-    doc.setFont(
-        "helvetica",
-        "bold"
-    );
-
-    doc.setFontSize(18);
-
-    doc.text(
-        "SpectroCough AI Report",
-        14,
-        17
-    );
-
-    doc.setFontSize(9);
-
-    doc.text(
-        "Respiratory Acoustic Screening Report",
-        14,
-        23
-    );
-
+    drawHeader();
     y = 40;
 
     /* =======================================
@@ -1556,7 +1563,8 @@ async function downloadPDF() {
        CLASS PROBABILITIES
     ======================================= */
 
-    if (data.probabilities) {
+    // Fix: Added Object type check to prevent crash
+    if (data.probabilities && typeof data.probabilities === 'object') {
 
         sectionTitle(
             "Class Probability Distribution"
@@ -1567,7 +1575,7 @@ async function downloadPDF() {
         ).forEach(
             ([cls, prob]) => {
 
-                addPageIfNeeded(10);
+                addPageIfNeeded(12); // Slightly increased to ensure bar fits
 
                 const pct =
                     (
@@ -1611,11 +1619,11 @@ async function downloadPDF() {
                     233
                 );
 
+                // Fix: Math.min limits bar to 100% max to prevent breaking borders
                 doc.rect(
                     14,
                     y + 2,
-                    140 *
-                    (prob || 0),
+                    140 * Math.min((prob || 0), 1), 
                     4,
                     "F"
                 );
@@ -1666,11 +1674,11 @@ async function downloadPDF() {
     /* =======================================
        FEATURE DEVIATIONS
     ======================================= */
-
+    
+    // Fix: Array.isArray check to prevent forEach crash
     if (
         data.explanation &&
-        data.explanation
-            .top_deviating_features
+        Array.isArray(data.explanation.top_deviating_features)
     ) {
 
         sectionTitle(
@@ -1680,11 +1688,13 @@ async function downloadPDF() {
         data.explanation
             .top_deviating_features
             .forEach(feature => {
-
-                normalText(
-                    `${feature.feature} | Z-score: ${feature.z_score.toFixed(2)} | Difference: ${feature.percent_difference.toFixed(2)}%`
-                );
-
+                
+                // Extra safety check in case object is malformed
+                if(feature && typeof feature.z_score === 'number' && typeof feature.percent_difference === 'number') {
+                    normalText(
+                        `${feature.feature} | Z-score: ${feature.z_score.toFixed(2)} | Difference: ${feature.percent_difference.toFixed(2)}%`
+                    );
+                }
             });
     }
 
@@ -1728,7 +1738,7 @@ async function downloadPDF() {
         doc.text(
             `SpectroCough | Page ${i} of ${pages}`,
             PAGE_WIDTH / 2,
-            PAGE_HEIGHT - 8,
+            PAGE_HEIGHT - 12, // Fix: Moved up 4mm for physical printing safety
             { align: "center" }
         );
     }
@@ -1737,6 +1747,442 @@ async function downloadPDF() {
         `SpectroCough_Report_${Date.now()}.pdf`
     );
 }
+// async function downloadPDF() {
+
+//     const { jsPDF } = window.jspdf;
+
+//     const sessionData =
+//         localStorage.getItem(
+//             "latestPredictionSession"
+//         );
+
+//     if (!sessionData) {
+//         alert("No report available.");
+//         return;
+//     }
+
+//     const data = JSON.parse(sessionData);
+
+//     const doc = new jsPDF({
+//         orientation: "portrait",
+//         unit: "mm",
+//         format: "a4"
+//     });
+
+//     const PAGE_WIDTH = 210;
+//     const PAGE_HEIGHT = 297;
+
+//     let y = 20;
+
+//     function addPageIfNeeded(extra = 15) {
+
+//         if (y + extra > PAGE_HEIGHT - 20) {
+
+//             doc.addPage();
+
+//             y = 20;
+//         }
+//     }
+
+//     function sectionTitle(title) {
+
+//         addPageIfNeeded(15);
+
+//         doc.setFontSize(14);
+//         doc.setFont("helvetica", "bold");
+
+//         doc.setTextColor(
+//             14,
+//             165,
+//             233
+//         );
+
+//         doc.text(
+//             title,
+//             14,
+//             y
+//         );
+
+//         y += 8;
+
+//         doc.setDrawColor(
+//             14,
+//             165,
+//             233
+//         );
+
+//         doc.line(
+//             14,
+//             y - 3,
+//             195,
+//             y - 3
+//         );
+
+//         y += 3;
+//     }
+
+//     function normalText(text) {
+
+//         addPageIfNeeded(10);
+
+//         doc.setFontSize(10);
+//         doc.setFont(
+//             "helvetica",
+//             "normal"
+//         );
+
+//         doc.setTextColor(
+//             30,
+//             30,
+//             30
+//         );
+
+//         const wrapped =
+//             doc.splitTextToSize(
+//                 text,
+//                 180
+//             );
+
+//         doc.text(
+//             wrapped,
+//             14,
+//             y
+//         );
+
+//         y += wrapped.length * 5 + 4;
+//     }
+
+//     /* =======================================
+//        HEADER
+//     ======================================= */
+
+//     doc.setFillColor(
+//         14,
+//         165,
+//         233
+//     );
+
+//     doc.rect(
+//         0,
+//         0,
+//         PAGE_WIDTH,
+//         28,
+//         "F"
+//     );
+
+//     doc.setTextColor(
+//         255,
+//         255,
+//         255
+//     );
+
+//     doc.setFont(
+//         "helvetica",
+//         "bold"
+//     );
+
+//     doc.setFontSize(18);
+
+//     doc.text(
+//         "SpectroCough AI Report",
+//         14,
+//         17
+//     );
+
+//     doc.setFontSize(9);
+
+//     doc.text(
+//         "Respiratory Acoustic Screening Report",
+//         14,
+//         23
+//     );
+
+//     y = 40;
+
+//     /* =======================================
+//        PATIENT INFO
+//     ======================================= */
+
+//     sectionTitle("Patient Information");
+
+//     doc.setFontSize(10);
+//     doc.setTextColor(0,0,0);
+
+//     doc.text(
+//         `User : ${
+//             localStorage.getItem(
+//                 "spectroUser"
+//             ) || "Guest"
+//         }`,
+//         14,
+//         y
+//     );
+
+//     y += 6;
+
+//     doc.text(
+//         `Generated : ${new Date().toLocaleString()}`,
+//         14,
+//         y
+//     );
+
+//     y += 10;
+
+//     /* =======================================
+//        PREDICTION SUMMARY
+//     ======================================= */
+
+//     sectionTitle("Prediction Summary");
+
+//     const confidence =
+//         Number(
+//             data.confidence || 0
+//         ) * 100;
+
+//     doc.setFillColor(
+//         245,
+//         248,
+//         255
+//     );
+
+//     doc.roundedRect(
+//         14,
+//         y,
+//         180,
+//         28,
+//         3,
+//         3,
+//         "F"
+//     );
+
+//     y += 8;
+
+//     doc.setFont(
+//         "helvetica",
+//         "bold"
+//     );
+
+//     doc.setFontSize(12);
+
+//     doc.text(
+//         `Predicted Class : ${
+//             data.predicted_class || "N/A"
+//         }`,
+//         18,
+//         y
+//     );
+
+//     y += 8;
+
+//     doc.setFont(
+//         "helvetica",
+//         "normal"
+//     );
+
+//     doc.text(
+//         `Confidence : ${confidence.toFixed(2)}%`,
+//         18,
+//         y
+//     );
+
+//     y += 8;
+
+//     doc.text(
+//         `Analysis Type : ${
+//             data.analysis_type ||
+//             "AI Analysis"
+//         }`,
+//         18,
+//         y
+//     );
+
+//     y += 15;
+
+//     /* =======================================
+//        CLASS PROBABILITIES
+//     ======================================= */
+
+//     if (data.probabilities) {
+
+//         sectionTitle(
+//             "Class Probability Distribution"
+//         );
+
+//         Object.entries(
+//             data.probabilities
+//         ).forEach(
+//             ([cls, prob]) => {
+
+//                 addPageIfNeeded(10);
+
+//                 const pct =
+//                     (
+//                         prob * 100
+//                     ).toFixed(2);
+
+//                 doc.setFont(
+//                     "helvetica",
+//                     "normal"
+//                 );
+
+//                 doc.text(
+//                     cls,
+//                     14,
+//                     y
+//                 );
+
+//                 doc.text(
+//                     `${pct}%`,
+//                     185,
+//                     y,
+//                     { align: "right" }
+//                 );
+
+//                 doc.setDrawColor(
+//                     220,
+//                     220,
+//                     220
+//                 );
+
+//                 doc.rect(
+//                     14,
+//                     y + 2,
+//                     140,
+//                     4
+//                 );
+
+//                 doc.setFillColor(
+//                     14,
+//                     165,
+//                     233
+//                 );
+
+//                 doc.rect(
+//                     14,
+//                     y + 2,
+//                     140 *
+//                     (prob || 0),
+//                     4,
+//                     "F"
+//                 );
+
+//                 y += 10;
+//             }
+//         );
+//     }
+
+//     /* =======================================
+//        LAYMAN EXPLANATION
+//     ======================================= */
+
+//     if (
+//         data.explanation &&
+//         data.explanation.layman_summary
+//     ) {
+
+//         sectionTitle(
+//             "Layman Explanation"
+//         );
+
+//         normalText(
+//             data.explanation
+//                 .layman_summary
+//         );
+//     }
+
+//     /* =======================================
+//        SCIENTIFIC EXPLANATION
+//     ======================================= */
+
+//     if (
+//         data.explanation &&
+//         data.explanation.scientific_summary
+//     ) {
+
+//         sectionTitle(
+//             "Scientific Analysis"
+//         );
+
+//         normalText(
+//             data.explanation
+//                 .scientific_summary
+//         );
+//     }
+
+//     /* =======================================
+//        FEATURE DEVIATIONS
+//     ======================================= */
+
+//     if (
+//         data.explanation &&
+//         data.explanation
+//             .top_deviating_features
+//     ) {
+
+//         sectionTitle(
+//             "Key Acoustic Deviations"
+//         );
+
+//         data.explanation
+//             .top_deviating_features
+//             .forEach(feature => {
+
+//                 normalText(
+//                     `${feature.feature} | Z-score: ${feature.z_score.toFixed(2)} | Difference: ${feature.percent_difference.toFixed(2)}%`
+//                 );
+
+//             });
+//     }
+
+//     /* =======================================
+//        DISCLAIMER
+//     ======================================= */
+
+//     addPageIfNeeded(30);
+
+//     sectionTitle(
+//         "Important Disclaimer"
+//     );
+
+//     normalText(
+//         "SpectroCough is an AI-assisted respiratory acoustic screening system. The generated results are intended only for educational and pre-screening purposes. They are not a medical diagnosis and must not replace consultation with qualified healthcare professionals."
+//     );
+
+//     /* =======================================
+//        FOOTER
+//     ======================================= */
+
+//     const pages =
+//         doc.internal.getNumberOfPages();
+
+//     for (
+//         let i = 1;
+//         i <= pages;
+//         i++
+//     ) {
+
+//         doc.setPage(i);
+
+//         doc.setFontSize(8);
+
+//         doc.setTextColor(
+//             120,
+//             120,
+//             120
+//         );
+
+//         doc.text(
+//             `SpectroCough | Page ${i} of ${pages}`,
+//             PAGE_WIDTH / 2,
+//             PAGE_HEIGHT - 8,
+//             { align: "center" }
+//         );
+//     }
+
+//     doc.save(
+//         `SpectroCough_Report_${Date.now()}.pdf`
+//     );
+// }
 
 
 /* =========================================
