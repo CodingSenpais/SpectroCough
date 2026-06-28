@@ -304,7 +304,7 @@ Datasets, runtime logs, temporary uploads, and generated reports are excluded fr
 
 # License
 
-This repository is intended for academic and educational purposes.
+This repository is intended for academic, research and educational purposes.
 
 ---
 
